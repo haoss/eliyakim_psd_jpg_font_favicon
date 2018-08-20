@@ -1,3 +1,89 @@
 /* footer */
 .footer
-  background-color: $color-gray
+  background-color: $primary-color
+  color: #7c7c7c
+  font-size: 13px
+  padding-top: 34px
+  &__top
+    padding-bottom: 20px
+  &__bottom
+    border-top: 1px solid #444444
+    color: #444
+    margin: 0 -15px
+    padding: 0 15px
+    +clearfix
+    &>div
+      height: 37px
+      line-height: 36px
+  &__copyright
+    float: left
+  &__development
+    float: right
+    a
+      display: inline-block
+      vertical-align: middle
+      margin-left: 10px
+      position: relative
+      top: -4px
+  &__title
+    text-transform: uppercase
+    font-family: $font-roboto-b
+    color: #444
+    font-size: 15px
+    line-height: 1
+    margin-bottom: 20px
+  &__list
+    margin: 0
+    padding: 0
+    &>li
+      list-style: none
+      margin: 0 0 7px 0
+      &>a, &>span
+        display: inline-block
+      &>a
+        text-decoration: none
+        color: #7c7c7c
+        &:hover, &:focus
+          color: #d1d1d1
+  &__address
+    font-size: 13px
+    line-height: 24px
+    a
+      text-decoration: undelrine
+      color: #7c7c7c
+      &:hover, &:focus
+        text-decoration: none
+  &__phone
+    position: relative
+    padding-left: 50px
+    padding-top: 14px
+    svg
+      position: absolute
+      left: 0
+      top: 10px
+      width: 40px
+      height: 40px
+      .path-color
+        fill: #828282
+    .span
+      display: block
+      line-height: 1
+      font-family: $font-roboto-l
+      font-size: 20px
+      margin-bottom: 10px
+    small
+      font-size: 14px
+      display: block
+      line-height: 22px
+      span
+        font-size: 16px
+  &__payment
+    margin-top: -10px
+    svg
+      width: 50px
+      height: 50px
+      display: inline-block
+      &+svg
+        margin-left: 15px
+      path
+        fill: rgba(#828282,.5)
