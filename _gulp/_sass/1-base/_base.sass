@@ -41,17 +41,20 @@ body
   font-weight: 400
   text-decoration: none
   margin: 0 0 15px 0
+  font-family: $font-roboto-b
 
 .h1, h1
   font-size: 45px
   line-height: 1.05
   letter-spacing: -1px
-  margin-bottom: 25px
+  margin-bottom: 20px
+  font-family: $font-basker-r
 
 .h2, h2
   font-size: 30px
   line-height: 1.14
   margin-bottom: 20px
+  font-family: $font-basker-b
 
 .h3, h3
   font-size: 22px
@@ -66,10 +69,12 @@ body
 
 .h6, h6
   font-size: 16px
+  font-family: $font-roboto-m
 
 .small, small
   font-size: 12px
   line-height: 1.2
+  color: $primary-color
 
 p
   line-height: 26px
@@ -79,7 +84,8 @@ em, i, .em, .i
   font-style: italic
 
 strong, b, .strong, .b
-  font-weight: bold
+  font-weight: 400
+  font-family: $font-roboto-b
 
 hr
   border: solid #ddd
@@ -187,8 +193,25 @@ a.link
 
 /* section */
 .section
-  padding: 50px 0
+  padding: 55px 0 45px 0
   min-width: 320px
+  &__head
+    h1, .h1
+      .small
+        text-transform: none
+        display: block
+        font-size: 30px
+        font-style: normal
+        font-family: $font-basker-i
+        color: $primary-color
+        padding-left: 145px
+    &--upper
+      .h1, h1
+        text-transform: uppercase
+    &--f34
+      .h1, h1
+        font-size: 34px
+
 
 .container
   .section
@@ -240,6 +263,9 @@ ol li
   &--border
     border: 0 !important
 
+  &--wrap
+    white-space: nowrap !important
+
 /* icons */
 .icon
   display: inline-block
@@ -252,3 +278,6 @@ ol li
     color: $color-black !important
   &--white
     color: $color-white !important
+
+.content
+  padding: 45px 0 55px 0

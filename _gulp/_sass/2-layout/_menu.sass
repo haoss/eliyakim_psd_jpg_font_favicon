@@ -6,3 +6,169 @@
     li
         list-style: none
         margin: 0
+
+.header
+  &__nav
+    ul
+      margin: 0
+      padding: 0
+      font-family: $font-roboto-m
+      font-size: 15px
+      text-transform: uppercase
+      li
+        list-style: none
+        margin: 0
+    .ul
+      &__level1
+        display: flex
+        justify-content: space-around
+      &__level2
+        padding: 18px 0
+        display: block
+        position: absolute
+        opacity: 0
+        visibility: hidden
+        transform: translateY(5px)
+        transition: all 0.35s
+        transition-delay: 0.25s
+        background: $color-white
+        width: 250px
+        border-left: 3px solid $color-lightblue
+        left: 0
+        top: 32px
+        margin-left: -37px
+        box-shadow: 0 10px 30px rgba($color-black,.1)
+    .li
+      &__level1
+        position: relative
+        &.active
+          .a__level1
+            color: $color-lightblue
+            &::after
+              opacity: 1
+              transform: translateY(0)
+        &:hover
+          .ul__level2
+            opacity: 1
+            visibility: visible
+            transform: translateY(0px)
+          .a__level1
+            color: $color-lightblue
+            &::after
+              opacity: 1
+              transform: translateY(0)
+      &__level2
+        &.active
+          .a__level2
+            color: $color-white
+            padding-left: 52px
+            background: $color-lightblue
+            .ion-ios-arrow-forward
+              opacity: 1
+              transition-delay: 0.15s
+      &__folder
+        &>.a__level1
+          font-family: $font-roboto-b
+          &::after
+            right: 11px
+    .a
+      &__level1
+        text-decoration: none
+        color: $primary-color
+        height: 36px
+        line-height: 36px
+        position: relative
+        overflow: hidden
+        display: block
+        &::after
+          content: ''
+          position: absolute
+          left: 0
+          right: 0
+          bottom: 4px
+          transform: translateY(10px)
+          height: 3px
+          transition: all 0.35s
+          background: $color-lightblue
+          opacity: 0
+        &:hover, &:focus
+          color: $color-lightblue
+          &::after
+            opacity: 1
+            transform: translateY(0)
+        .ion-chevron-down
+          font-size: 9px
+          margin-left: 3px
+          vertical-align: 2px
+      &__level2
+        text-decoration: none
+        height: 34px
+        line-height: 34px
+        text-transform: uppercase
+        display: block
+        padding-left: 37px
+        padding-right: 10px
+        color: $primary-color
+        font-family: $font-roboto-r
+        background: none
+        transition: all 0.35s
+        position: relative
+        .ion-ios-arrow-forward
+          position: absolute
+          left: 37px
+          top: 10px
+          font-size: 15px
+          line-height: 1
+          opacity: 0
+          transition: opacity 0.35s
+        &:hover, &:focus
+          color: $color-white
+          padding-left: 52px
+          background: $color-lightblue
+          .ion-ios-arrow-forward
+            opacity: 1
+            transition-delay: 0.15s
+
+    &-mobile
+      position: relative
+      display: none
+      &:hover
+        .header__nav-popup
+          opacity: 1
+          visibility: visible
+          transform: translateY(0px)
+    &-popup
+      padding: 18px 0
+      display: block
+      position: absolute
+      opacity: 0
+      visibility: hidden
+      transform: translateY(5px)
+      right: 0
+      transition: all 0.35s
+      transition-delay: 0.25s
+      background: $color-white
+      width: 250px
+      border-top: 3px solid $color-lightblue
+      top: 32px
+      margin-left: -37px
+      box-shadow: 0 10px 30px rgba($color-black,.1)
+    &-btn
+      border: 0
+      background: none
+      padding: 0
+      white-space: nowrap
+      overflow: hidden
+      height: 34px
+      width: 36px
+      text-align: right
+      i
+        display: inline-block
+        line-height: 1
+        vertical-align: middle
+      .ion-navicon-round
+        font-size: 16px
+        color: $color-lightblue
+      .ion-chevron-down
+        font-size: 9px
+        margin-left: 5px

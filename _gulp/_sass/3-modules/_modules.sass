@@ -1,8 +1,445 @@
 /* modules */
+.swiper
+  &-container
+    width: 100%
+    height: 100%
+    &-slide
+      text-align: center
+      font-size: 18px
+      background: #fff
+      display: flex
+      justify-content: center
+      align-items: center
 
-/* gallery */
-.gallery
-  &__item
-    padding: 5px
-    background: $color-white
-    box-shadow: 0 0 5px rgba($color-black,0.5)
+.more
+  text-transform: uppercase
+  color: $primary-color
+  display: inline-block
+  padding-right: 55px
+  position: relative
+  text-decoration: none
+  font-family: $font-roboto-r
+  font-size: 12px
+  &::after
+    content: ''
+    position: absolute
+    right: 0
+    bottom: 4px
+    width: 43px
+    height: 9px
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAJCAYAAACrOdX9AAAAe0lEQVQ4jc3UsQ2CUBCA4Q/CSC6gk0AtlQ5g3MHilfQMwSjqJNpAoPARE2O4P7m84povV7wipSRQLU7oUGOP57SsNiHlu43vBB4swNGwrIAjYsmAK7y2En3ZFT26EkXQaXHHBTs05V9u8XtHnM2/wgGPiNiPUIiGzULhDR+CHOYObMaAAAAAAElFTkSuQmCC') 0 0 no-repeat
+  &--light
+    &::after
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAJCAYAAACrOdX9AAAAf0lEQVQ4jc3UsQ2CUBCA4e8RVnATF9BJoJZKB3AJB7B3CEagINTKJNpItOAZE2O4P7m84povV7zU9YNANdjjjAobjNOyXISU7/R8J3DrDRwNywdwRCwZcOr64b4Y6fsuWBVIQafBFUesURf/OcTP7XDw+hW2uEXEzkIhGjYLhQeyfB79zyNTgQAAAABJRU5ErkJggg==')
+
+.main-carousel
+  &__wrapper
+    position: relative
+    .container
+      padding: 0
+      position: relative
+    .swiper
+      &-slide
+        background:
+          color: $color-white
+          position: center center
+          repeat: repeat-x
+          size:  100% 530px
+      &-pagination
+        text-align: right
+        font-family: $font-basker-i
+        padding-right: 61px
+        color: #787878
+        font-size: 14px
+        bottom: 233px
+        width: 503px
+        .swiper-pagination
+          &-total
+            font-family: $font-basker-sbi
+            font-size: 20px
+            color: #adadad
+      &-button-next
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAJCAYAAACvzAXAAAAAfElEQVQ4jc3TsQ3CQBBE0X8WLRC7FruZCSCCPogc7NTgItwKVAKR0Qkbp7cTrSZ60mpKRNAykr637StwAwZJr7XvGrj+RtIEPIDFdr/2qZCwD02HhC20RMS7NeogM3A+AaWloh5OHdsX4A6MKd9dAyU90yF/gZBsOHtAgA9MwC24ENHQ1gAAAABJRU5ErkJggg==') 0 0 no-repeat
+        width: 41px
+        height: 9px
+        top: inherit
+        bottom: 242px
+        left: 458px
+        &:focus
+          outline: none
+        &:hover
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAJCAYAAACvzAXAAAAAZ0lEQVQ4jc3OsRGCQBRF0bPONobtaKStUAC5BRjSCvZgrokwissQ/n+TN/OiU9yfEnXGBR0e81nDOO36z46+oNmQNKAZkaygFa9AzF43DBUlWrLRCVccD9GSjRYgpozIHyBkQ/4B4Q05KROwb7dclQAAAABJRU5ErkJggg==') 0 0 no-repeat
+      &-button-prev
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJCAYAAAA2NNx1AAAAaElEQVQokbXRuw2DQBBF0QPaQtwKRZCTbeRSnBlpqjG1ENMECUgExuKzvtHTBCeZKiJseuCDF3oHyjl/vdd30F+tcFF0hYujUEXEgAltKRQSOgx44n0W2HtewohmwV3B92D/wNNmF8Vn8CsZkdqQV+MAAAAASUVORK5CYII=') 0 0 no-repeat
+        width: 22px
+        height: 9px
+        bottom: 242px
+        top: inherit
+        left: 358px
+        &:focus
+          outline: none
+        &:hover
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJCAYAAAA2NNx1AAAAYElEQVQokbXOsRFAQBAF0HfmClGEBhQh14BSZNQioxaxVAECzFxu/Zmd3ejtT5ZTkRorRsw+pPoDLeFQ9IXDUUiWc8OBLgrlbtyjwYAUNRk7WmzPsymicX52OJ6LOxS/AB5GFd+d/U0+AAAAAElFTkSuQmCC') 0 0 no-repeat
+  &__block
+    position: absolute
+    left: 0
+    bottom: 57px
+    min-height: 227px
+    min-width: 534px
+    background: rgba($color-black,.34)
+    color: $color-white
+    overflow: hidden
+    &>a
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 7
+    &::before
+      content: ''
+      z-index: 1
+      position: absolute
+      background: rgba($color-black,.7)
+      left: 9px
+      top: 8px
+      right: 9px
+      bottom: 9px
+    &-name
+      font-family: $font-basker-r
+      font-size: 19px
+      position: relative
+      z-index: 5
+      margin-left: 37px
+      top: 25px
+      text-transform: uppercase
+      padding-bottom: 14px
+      margin-bottom: 16px
+      padding-right: 25px
+      strong
+        display: block
+        line-height: 0.7
+        font-size: 75px
+        font-family: $font-basker-r
+        margin-top: 12px
+      &::after
+        position: absolute
+        content: ''
+        width: 105px
+        height: 1px
+        left: 0
+        bottom: 0
+        background: #7f7d7b
+    &-title
+      top: 25px
+      position: relative
+      margin-left: 37px
+      font-family: $font-basker-r
+      text-transform: uppercase
+      z-index: 5
+      color: #adadad
+      font-size: 22px
+      padding-right: 25px
+      span
+        display: inline-block
+        line-height: 1
+        font-size: 11px
+        vertical-align: 11px
+        &::after
+          content: ''
+          background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAJCAYAAACrOdX9AAAAe0lEQVQ4jc3UsQ2CUBCA4Q/CSC6gk0AtlQ5g3MHilfQMwSjqJNpAoPARE2O4P7m84povV7wipSRQLU7oUGOP57SsNiHlu43vBB4swNGwrIAjYsmAK7y2En3ZFT26EkXQaXHHBTs05V9u8XtHnM2/wgGPiNiPUIiGzULhDR+CHOYObMaAAAAAAElFTkSuQmCC) 0 0 no-repeat
+          width: 43px
+          height: 9px
+          display: inline-block
+          margin-left: 16px
+
+.about
+  background: $color-lightgray
+  font-size: 14px
+  font-family: $font-roboto-l
+  &__content
+    p
+      line-height: 24px
+  &__carousel
+    position: relative
+    margin-top: 7px
+    max-width: 357px
+    margin: 0 auto
+    &::before
+      content: ''
+      position: absolute
+      left: 8px
+      right: -10px
+      top: 8px
+      bottom: 40px
+      border: 8px solid rgba($color-black,.6)
+      z-index: 10
+    .swiper
+      &-wrapper
+        padding-right: 14px
+        margin-bottom: 50px
+      &-pagination
+        text-align: right
+        font-family: $font-basker-i
+        padding-right: 60px
+        color: #8b8b8b
+        font-size: 14px
+        bottom: 5px
+        .swiper-pagination
+          &-total
+            font-family: $font-basker-sbi
+            font-size: 20px
+            color: $primary-color
+      &-button-next
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAJCAYAAACvzAXAAAAAfElEQVQ4jc3TsQ3CQBBE0X8WLRC7FruZCSCCPogc7NTgItwKVAKR0Qkbp7cTrSZ60mpKRNAykr637StwAwZJr7XvGrj+RtIEPIDFdr/2qZCwD02HhC20RMS7NeogM3A+AaWloh5OHdsX4A6MKd9dAyU90yF/gZBsOHtAgA9MwC24ENHQ1gAAAABJRU5ErkJggg==') 0 0 no-repeat
+        width: 41px
+        height: 9px
+        top: inherit
+        bottom: 15px
+        right: 2px
+        &:focus
+          outline: none
+        &:hover
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAJCAYAAACvzAXAAAAAZ0lEQVQ4jc3OsRGCQBRF0bPONobtaKStUAC5BRjSCvZgrokwissQ/n+TN/OiU9yfEnXGBR0e81nDOO36z46+oNmQNKAZkaygFa9AzF43DBUlWrLRCVccD9GSjRYgpozIHyBkQ/4B4Q05KROwb7dclQAAAABJRU5ErkJggg==') 0 0 no-repeat
+      &-button-prev
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJCAYAAAA2NNx1AAAAaElEQVQokbXRuw2DQBBF0QPaQtwKRZCTbeRSnBlpqjG1ENMECUgExuKzvtHTBCeZKiJseuCDF3oHyjl/vdd30F+tcFF0hYujUEXEgAltKRQSOgx44n0W2HtewohmwV3B92D/wNNmF8Vn8CsZkdqQV+MAAAAASUVORK5CYII=') 0 0 no-repeat
+        width: 22px
+        height: 9px
+        bottom: 15px
+        top: inherit
+        right: 121px
+        left: inherit
+        &:focus
+          outline: none
+        &:hover
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJCAYAAAA2NNx1AAAAYElEQVQokbXOsRFAQBAF0HfmClGEBhQh14BSZNQioxaxVAECzFxu/Zmd3ejtT5ZTkRorRsw+pPoDLeFQ9IXDUUiWc8OBLgrlbtyjwYAUNRk7WmzPsymicX52OJ6LOxS/AB5GFd+d/U0+AAAAAElFTkSuQmCC') 0 0 no-repeat
+
+.clients
+  &__carousel
+    padding-top: 10px
+    margin-bottom: 30px
+    .swiper-slide
+      height: 105px
+      display: flex
+      justify-content: center
+      align-items: center
+      position: relative
+      a
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 5
+      img
+        transition: filter 0.35s, opacity 0.35s
+        filter: grayscale(1)
+        opacity: 0.6
+      &:hover
+        img
+          opacity: 1
+          filter: grayscale(0)
+
+.order
+  padding-top: 40px
+  padding-bottom: 0
+  &__form
+    border: 8px solid $color-lightblue
+    padding: 45px 50px 40px 50px
+    position: relative
+
+.main-catalog
+  padding-bottom: 53px
+  padding-top: 35px
+  &__block
+    position: relative
+    height: 240px
+    margin-bottom: 30px
+    box-shadow: 0 0 0 rgba($color-black,.2)
+    transition: box-shadow 0.35s
+    &::before
+      position: absolute
+      content: ''
+      z-index: 5
+      left: 9px
+      top: 9px
+      right: 9px
+      bottom: 9px
+      background: rgba($color-white,.7)
+      transition: background 0.15s
+    background:
+      color: $color-gray
+      position: top center
+      size: cover
+      repeat: no-repeat
+    a
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      z-index: 15
+    &:hover
+      box-shadow: 0 13px 20px rgba($color-black,.2)
+      &::before
+        background: rgba($color-blue,.8)
+      .main-catalog
+        &__block
+          &-title
+            color: $color-white
+            small
+              color: $color-white
+          &-text
+            padding-left: 0
+            padding-right: 67px
+            color: $color-white
+            &::before
+              width: 0
+              background: $color-white
+            &::after
+              width: 43px
+    &-title
+      color: $primary-color
+      text-transform: uppercase
+      font-size: 40px
+      font-family: $font-basker-sb
+      line-height: 1
+      position: absolute
+      z-index: 10
+      bottom: 38px
+      left: 37px
+      transition: color 0.35s
+      small
+        font-family: $font-basker-i
+        font-size: 30px
+        display: block
+        line-height: 1
+        text-transform: lowercase
+        transition: color 0.35s
+        color: $primary-color
+    &-text
+      font-family: $font-basker-i
+      position: absolute
+      z-index: 10
+      padding-left: 67px
+      padding-right: 0
+      color: $primary-color
+      font-size: 18px
+      line-height: 20px
+      top: 34px
+      left: 41px
+      transition: all 0.35s
+      &::before
+        content: ''
+        position: absolute
+        width: 50px
+        height: 1px
+        background: #adaca8
+        left: 2px
+        top: 9px
+        transition: all 0.35s
+      &::after
+        width: 0px
+        height: 9px
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAJCAYAAACrOdX9AAAAf0lEQVQ4jc3UsQ2CUBCA4e8RVnATF9BJoJZKB3AJB7B3CEagINTKJNpItOAZE2O4P7m84povV7zU9YNANdjjjAobjNOyXISU7/R8J3DrDRwNywdwRCwZcOr64b4Y6fsuWBVIQafBFUesURf/OcTP7XDw+hW2uEXEzkIhGjYLhQeyfB79zyNTgQAAAABJRU5ErkJggg==') right center no-repeat
+        position: absolute
+        content: ''
+        right: 0
+        top: 5px
+        transition: all 0.35s
+
+.advantages
+  padding: 40px 0
+  &__row
+    display: flex
+    justify-content: space-between
+  &__block
+    display: flex
+    align-items: center
+    font-size: 12px
+    &>div
+      &:first-child
+        flex-shrink: 0
+      &+div
+        padding-left: 15px
+    svg
+      width: 52px
+      height: 52px
+      display: block
+      .path-color
+        fill: $color-blue
+    p
+      margin: 0
+      line-height: 18px
+      max-width: 160px
+
+.popup
+  position: relative
+  margin: 0 auto
+  background: $color-white
+  max-width: 360px
+  box-shadow: 0 0 46px rgba($color-black,.4)
+  padding: 30px 40px 30px 40px
+  .form
+    margin-top: 60px
+    &__border
+      margin: 0 -40px -30px -40px
+      position: relative
+    legend
+      position: absolute
+      border: 0
+      top: -65px
+      left: 35px
+      color: $color-blue
+      text-transform: uppercase
+      font-size: 45px
+      font-family: $font-basker-r
+      line-height: 0.9
+      z-index: 5
+      &>span
+        font-size: 35px
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          left: -31px
+          height: 8px
+          width: 200px
+          background: $color-white
+          top: 15px
+          z-index: 5
+        &>span
+          position: relative
+          z-index: 10
+      &::before
+        width: 4px
+        background: $color-blue
+        content: ''
+        height: 100px
+        position: absolute
+        left: -39px
+        top: 21px
+      &::after
+        position: absolute
+        content: ''
+        top: 21px
+        width: 8px
+        height: 4px
+        background: $color-blue
+        left: -39px
+  .mfp-close
+    font-size: 0
+    opacity: 1
+    &::before
+      content: "\f404"
+      position: absolute
+      font-family: $font-ionicons
+      left: 12px
+      top: 12px
+      color: #dbddde
+      font-size: 50px
+      line-height: 0.4
+      transition: color 0.35s
+    &:hover
+      &::before
+        color: $primary-color

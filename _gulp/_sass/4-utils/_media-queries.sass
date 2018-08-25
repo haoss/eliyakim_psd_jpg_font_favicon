@@ -13,11 +13,149 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-  /**/
+  .about
+    &__content
+      p
+        &:last-of-type
+          display: none
+  .order
+    &__form
+      padding-left: 43px
+      padding-right: 43px
+  .main-catalog
+    &__block
+      height: 195px
+      &-title
+        font-size: 32px
+        bottom: 30px
+        left: 32px
+        small
+          font-size: 24px
+      &-text
+        font-size: 15px
+        padding-left: 55px
+        left: 31px
+        &::before
+          width: 40px
+  .advantages
+    &__block
+      p
+        max-width: 140px
+  .header
+    height: 165px
+    &__top
+      &>div
+        &:nth-child(2)
+          display: none
+    &__logo
+      span
+        display: block
+  .main-carousel
+    &__wrapper
+      .swiper
+        &-slide
+          background-size:  100% 441px
+        &-pagination
+          bottom: 223px
+        &-button-next, &-button-prev
+          bottom: 233px
+    &__block
+      bottom: 47px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
-  /**/
+  .clients
+    &__carousel
+      padding-top: 0
+      margin-bottom: 10px
+  .order
+    padding-top: 15px
+    &__form
+      padding-left: 24px
+      padding-right: 24px
+  .main-catalog
+    padding-top: 25px
+    padding-bottom: 16px
+    &__block
+      height: 146px
+      &::before
+        top: 6px
+        right: 6px
+        bottom: 6px
+        left: 6px
+      &-title
+        font-size: 24px
+        bottom: 24px
+        left: 24px
+        small
+          font-size: 18px
+      &-text
+        display: none
+  .advantages
+    padding: 35px 0 10px 0
+    &__row
+      margin: 0 -15px
+      &>div
+        padding: 0 15px
+    &__block
+      flex-direction: column
+      &>div
+        width: 100%
+        text-align: center
+        &+div
+          padding-left: 0
+      p
+        margin: 0 auto
+        max-width: inherit
+      svg
+        margin: 0 auto 10px
+  .header
+    &__address, &__phone
+      padding-left: 0
+      // height: auto
+      svg
+        display: none
+    &__address
+      max-width: 170px
+    &__nav
+      .ul__level2
+        margin-left: 0
+        border-left: 0
+  .btn
+    &--header
+      width: 157px
+  .main-carousel
+    &__wrapper
+      .swiper
+        &-slide
+          background-size:  100% 340px
+        &-pagination
+          width: 411px
+          font-size: 11px
+          bottom: 172px
+          .swiper-pagination-total
+            font-size: 15px
+        &-button-next, &-button-prev
+          bottom: 178px
+        &-button-next
+          left: 360px
+        &-button-prev
+          left: 280px
+    &__block
+      bottom: 37px
+      min-height: 180px
+      min-width: 420px
+      &-name
+        font-size: 14px
+        margin-left: 30px
+        strong
+          font-size: 60px
+      &-title
+        font-size: 18px
+        margin-top: -5px
+        margin-left: 30px
+        span
+          font-size: 9px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -26,10 +164,215 @@
     transition-property: none !important
     transform: none !important
     animation: none !important
+  .about
+    &__content
+      padding-bottom: 40px
+  .form
+    &__legend
+      position: inherit
+      font-size: 20px
+      font-family: $font-basker-sb
+      padding-left: 0
+      padding-right: 0
+      background: none
+      margin-bottom: 25px
+  .order
+    &__form
+      padding: 28px 24px
+  .main-catalog
+    &>.container
+      padding-left: 60px
+      padding-right: 60px
+    &__block
+      height: 240px
+      &::before
+        top: 9px
+        right: 9px
+        bottom: 9px
+        left: 9px
+      &-title
+        font-size: 38px
+        bottom: 40px
+        left: 37px
+        small
+          font-size: 28px
+      &-text
+        font-size: 18px
+        padding-left: 65px
+        left: 37px
+        display: block
+        max-width: 280px
+        &::before
+          width: 50px
+  .advantages
+    &__row
+      flex-wrap: wrap
+      &>div
+        width: 50%
+        &:first-child, &:nth-child(2)
+          padding-bottom: 20px
+    &__block
+      svg
+        height: 40px
+        width: 40px
+      p
+        max-width: 170px
+        margin: 0 auto
+  .header
+    &__top
+      &>div
+        &:nth-child(3), &:nth-child(4)
+          display: none
+    &__nav
+      display: flex
+      justify-content: space-between
+      &>div
+        &:first-child
+          width: calc(100% - 40px)
+        &:last-child
+          width: 40px
+      .li
+        &__level1
+          display: none
+          &:first-child, &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4)
+            display: block
+      &-mobile
+        display: block
+    &__phone
+      padding-left: 26px
+      height: 20px
+      padding-top: 2px
+      float: right
+      font-size: 16px
+      margin-bottom: 7px
+      svg
+        display: block
+        height: 20px
+        width: 20px
+  .btn
+    &--header
+      float: right
+      width: 210px
+  .main-carousel
+    &__wrapper
+      .swiper
+        &-pagination
+          width: 300px
+          bottom: 73px
+        &-button-next, &-button-prev
+          bottom: 78px
+        &-button-next
+          left: 250px
+        &-button-prev
+          left: 170px
+    &__block
+      bottom: 22px
+      min-height: 82px
+      min-width: 304px
+      &::before
+        left: 5px
+        top: 5px
+        right: 5px
+        bottom: 5px
+      &-title
+        display: none
+      &-name
+        font-size: 10px
+        padding-bottom: 0
+        margin: 0
+        margin-left: 21px
+        top: 14px
+        &::after
+          display: none
+        strong
+          font-size: 43px
+          margin-top: 8px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
-  /**/
+  .h1, h1
+    font-size: 36px
+  .hidden-xxs
+    display: none !important
+  .col-xxs-12
+    width: 100% !important
+  .footer
+    &__title
+      text-align: center
+    &__address
+      text-align: center
+    &__top
+      padding-bottom: 34px
+    &__copyright
+      float: none
+      text-align: center
+  .section
+    &__head
+      .h1, h1
+        .small
+          padding-left: 0
+  .form
+    &__legend
+      font-size: 17px
+  .main-catalog
+    &>.container
+      padding-left: 15px
+      padding-right: 15px
+    &__block
+      height: 192px
+      &::before
+        top: 8px
+        right: 8px
+        bottom: 8px
+        left: 8px
+      &-title
+        font-size: 30px
+        bottom: 32px
+        left: 31px
+        small
+          font-size: 22px
+      &-text
+        font-size: 14px
+        padding-left: 55px
+        left: 31px
+        display: block
+        max-width: 230px
+        top: 26px
+        &::before
+          width: 40px
+  .header
+    height: 267px
+    &__top
+      padding-top: 25px
+      flex-direction: column
+      &>div
+        &+div
+          padding-left: 0
+    &__logo
+      margin-bottom: 12px
+    &__phone
+      font-size: 20px
+      float: none
+      width: 185px
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 17px
+    &__nav
+      .li__level1
+        &:nth-child(4)
+          display: none
+  .btn
+    &--header
+      float: none
+  .main-carousel
+    &__wrapper
+      .swiper
+        &-pagination
+          bottom: 51px
+        &-button-next, &-button-prev
+          bottom: 57px
+    &__block
+      bottom: 0
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

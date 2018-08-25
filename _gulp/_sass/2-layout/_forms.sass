@@ -1,14 +1,18 @@
 /* forms */
 
-input
+input, textarea
   &::-webkit-input-placeholder
-    color: $color-gray
+    color: $primary-color
+    font-family: $font-roboto-l
   &::-moz-placeholder
-    color: $color-gray
+    color: $primary-color
+    font-family: $font-roboto-l
   &:-ms-input-placeholder
-    color: $color-gray
+    color: $primary-color
+    font-family: $font-roboto-l
   &:-moz-placeholder
-    color: $color-gray
+    color: $primary-color
+    font-family: $font-roboto-l
 
 button, input, optgroup, select, textarea
   margin: 0
@@ -25,22 +29,108 @@ button, html input[type=button], input[type=reset], input[type=submit]
 
 .form
   &-group,  &__group
-    margin-bottom: 15px
+    margin-bottom: 20px
+    &.has-feedback
+      position: relative
+      .ion-alert-circled
+        position: absolute
+        display: none
+        right: 11px
+        top: 12px
+        font-size: 15px
+        color: $color-red
+        line-height: 1
+      &.has-error
+        .form
+          &-control, &__control
+            padding-right: 35px
+        .ion-alert-circled
+          display: block
+    &.is-focus
+      .form
+        &-control
+          background: $color-white
 
   &-control, &__control
     display: block
     width: 100%
-    height: 34px
-    padding: 6px 12px
+    height: 40px
+    padding: 6px 10px 6px 17px
     font-size: 14px
     line-height: 1.42857143
-    color: #555
-    background-color: $color-white
+    color: $primary-color
+    background-color: #f7f9fa
     background-image: none
-    border: 1px solid $color-gray
-    border-radius: 4px
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075)
+    border: 2px solid #f7f9fa
+    border-radius: 0px
+    box-shadow: none
+    font-family: $font-roboto-m
     transition: all .35s
+    &:focus
+      background: #f7f9fa
+      border-color: #f7f9fa
+      box-shadow: none
+
+  &__legend
+    position: absolute
+    border: 0
+    background: $color-white
+    padding: 0 22px
+    margin: 0
+    font-size: 30px
+    font-weight: 400
+    color: $color-blue
+    font-family: $font-basker-r
+    left: 10px
+    top: -22px
+    line-height: 1.25
+    width: auto
+    text-transform: uppercase
+
+  &__checkbox
+    position: relative
+    padding-left: 22px
+    font-family: $font-roboto-l
+    font-weight: 400
+    cursor: pointer
+    color: $primary-color
+    margin: 0
+    text-align: left
+    input
+      display: none
+      &:checked
+        &~.ion-android-checkbox-outline-blank
+          display: none
+        &~.ion-android-checkbox-outline
+          display: block
+    [class*='ion-android']
+      position: absolute
+      font-size: 20px
+      left: 0
+      top: 0
+      color: $primary-color
+      line-height: 1
+      top: 0px
+      font-size: 16px
+    .ion-android-checkbox-outline
+      display: none
+    .span
+      display: block
+      line-height: 15px
+      font-size: 11px
+      color: $primary-color
+      a
+        color: $primary-color
+        text-decoration: none
+        &:hover, &:focus
+          color: $color-blue
+          text-decoration: underline
+    &--inline-block
+      display: inline-block
+
+  &__border
+    border: 4px solid $color-blue
+    padding: 37px 37px 30px 37px
 
 textarea
   &.form-control, &.form__control
@@ -56,15 +146,28 @@ label
 .has
   &-success .form-control
     border-color: #3c763d
-    box-shadow: inset 0 1px 1px rgba(#3c763d,.75)
+    box-shadow: none
 
   &-warning .form-control
     border-color: #8a6d3b
-    box-shadow: inset 0 1px 1px rgba(#8a6d3b,.75)
+    box-shadow: none
 
-  &-error .form-control
-    border-color: #a94442
-    box-shadow: inset 0 1px 1px rgba(#a94442,.75)
+  &-error
+    .form-control
+      border-color: $color-darkred
+      color: $color-red
+      box-shadow: none
+      &::-webkit-input-placeholder
+        color: $color-red
+      &::-moz-placeholder
+        color: $color-red
+      &:-ms-input-placeholder
+        color: $color-red
+      &:-moz-placeholder
+        color: $color-red
+      &:focus
+        border-color: $color-darkred
+        box-shadow: none
 
   &-success .control-label
     color: #3c763d

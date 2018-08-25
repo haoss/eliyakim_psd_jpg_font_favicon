@@ -4,6 +4,7 @@
   color: #7c7c7c
   font-size: 13px
   padding-top: 34px
+  overflow: hidden
   &__top
     padding-bottom: 20px
   &__bottom
@@ -87,3 +88,26 @@
         margin-left: 15px
       path
         fill: rgba(#828282,.5)
+  &__social
+    margin-bottom: 15px
+    svg
+      height: 31px
+      path
+        transition: fill 0.35s
+        fill: #828282
+      &.socialFb
+        width: 16px
+      &.socialOk
+        width: 19px
+    a
+      display: inline-block
+      &+a
+        margin-left: 23px
+      &:hover
+        svg
+          &.socialFb
+            path
+              fill: #2c5daf
+          &.socialOk
+            path
+              fill: #d7893d

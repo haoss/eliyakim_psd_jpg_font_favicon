@@ -1,25 +1,7 @@
-'use strict'
+'use strict';
 
 // Document ready
 $(document).on('ready', function(){
-
-  // E-mail Ajax Send
-  // Documentation & Example: https://github.com/agragregra/uniMail
-  $("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      alert("Thank you!");
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
 
   // Magnific popup gallery
   $('.gallery').each(function() {
@@ -72,6 +54,11 @@ $(document).on('ready', function(){
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
 
+  aboutCarousel();
+  clientsCarousel();
+  inputFocus();
+  mainSlider();
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
@@ -87,12 +74,11 @@ $(document).on('ready', function(){
 });
 
 $(window).on('load', function() {
-  // $(".loader_inner").fadeOut();
   $(".loader").delay(400).fadeOut("slow");
 });
 
-$(window).on('scroll', function() { console.log('scroll'); });
-$(window).on('resize', function() { console.log('resize'); });
+$(window).on('scroll', function() { });
+$(window).on('resize', function() { });
 
 /*
 version 2015-09-23 14:30 GMT +2
@@ -153,5 +139,106 @@ function simpleForm(form, callback) {
     $(form).addClass('ajax-waiting');
 
     return false;
+  });
+}
+
+function aboutCarousel() {
+  var swiper = new Swiper('.about__carousel .swiper-container', {
+    pagination: {
+      el: '.about__carousel .swiper-pagination',
+      type: 'fraction',
+      formatFractionCurrent: function(number) {
+        if (number > 0 && number < 10) {
+          return '0' + number
+        } else {
+          return number
+        }
+      },
+      formatFractionTotal: function(number) {
+        if (number > 0 && number < 10) {
+          return '0' + number
+        } else {
+          return number
+        }
+      }
+    },
+    navigation: {
+      nextEl: '.about__carousel .swiper-button-next',
+      prevEl: '.about__carousel .swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+    },
+    loop: true
+  });
+}
+
+function clientsCarousel(){
+  var swiper = new Swiper('.clients__carousel .swiper-container', {
+    slidesPerView: 6,
+    spaceBetween: 30,
+    breakpoints: {
+      1199: {
+        slidesPerView: 5
+      },
+      991: {
+        slidesPerView: 4
+      },
+      767: {
+        slidesPerView: 3
+      },
+      600: {
+        slidesPerView: 2
+      }
+    },
+    autoplay: {
+      delay: 3500,
+    },
+    loop: true
+  });
+}
+
+function inputFocus(){
+  $('.input-focus').each(function(){
+    var _this = $(this);
+    _this.focus(function() {
+      _this.parents().addClass('is-focus');
+    }).blur(function() {
+      if (!_this.val().length > 0) {
+        _this.parents().removeClass('is-focus');
+      }
+    });
+  })
+}
+
+function mainSlider(){
+  var swiper = new Swiper('.main-carousel .swiper-container', {
+    pagination: {
+      el: '.main-carousel .swiper-pagination',
+      type: 'fraction',
+      formatFractionCurrent: function(number) {
+        if (number > 0 && number < 10) {
+          return '0' + number
+        } else {
+          return number
+        }
+      },
+      formatFractionTotal: function(number) {
+        if (number > 0 && number < 10) {
+          return '0' + number
+        } else {
+          return number
+        }
+      }
+    },
+    navigation: {
+      nextEl: '.main-carousel .swiper-button-next',
+      prevEl: '.main-carousel .swiper-button-prev',
+    },
+    effect: 'fade',
+    // autoplay: {
+    //   delay: 4000,
+    // },
+    // loop: true
   });
 }

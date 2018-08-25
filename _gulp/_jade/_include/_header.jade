@@ -2,14 +2,111 @@
 header.header
   .container
     
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
+    .header__top
+      div
+        .header__logo
+          a(href="#!")
+            img(src="./img/logo.png", alt="")
+            span Оснащение отелей под ключ с 2010 года
+      div
+        .header__about Оснащение отелей 
+          br
+          | под ключ с 2010 года
+      div
+        .header__address
+          +mapMarker
+          strong г. Москва, ул. Образцова, д. 12, к2
+          span Пн - Пт, 10:00 - 20:00
+      div
+        .header__phone
+          +footerAddress
+          a(href="tel:").span +7 800 
+            strong 770 57 78
+          a(href="tel:").span +7 495 
+            strong 230 40 60
+      div
+        .header__phone.visible-xs
+          +footerAddress
+          a(href="tel:").span +7 800 
+            strong 770 57 78
+        a(href="#popup1").btn.btn--header.open-popup-link Заказать звонок
     
-    nav.navigation(role="navigation")
-      ul
-        each val, key in navigation
-          if active === key
-            li.active
-              a(href=val, title=key)= key
-          else
-            li
-              a(href=val, title=key)= key
+    nav.header__nav
+      div
+        ul.ul__level1
+          li.li__level1.li__folder
+            a(href="#!").a__level1 Каталог
+              i.ion-chevron-down
+            ul.ul__level2
+              li.li__level2: a(href="#!").a__level2
+                i.ion-ios-arrow-forward
+                | Постельное белье
+              li.li__level2: a(href="#!").a__level2
+                i.ion-ios-arrow-forward
+                | Для ресторанов
+              li.li__level2.active: a(href="#!").a__level2
+                i.ion-ios-arrow-forward
+                | Полотенца
+              li.li__level2: a(href="#!").a__level2
+                i.ion-ios-arrow-forward
+                | Халаты
+              li.li__level2: a(href="#!").a__level2
+                i.ion-ios-arrow-forward
+                | Косметика
+              li.li__level2: a(href="#!").a__level2
+                i.ion-ios-arrow-forward
+                | Категория 6
+              li.li__level2: a(href="#!").a__level2
+                i.ion-ios-arrow-forward
+                | Категория 7
+              li.li__level2: a(href="#!").a__level2
+                i.ion-ios-arrow-forward
+                | Категория 8
+              li.li__level2: a(href="#!").a__level2
+                i.ion-ios-arrow-forward
+                | Категория 9
+          li.li__level1
+            a(href="#!").a__level1 Акции
+          li.li__level1
+            a(href="#!").a__level1 Доставка
+          li.li__level1
+            a(href="#!").a__level1 Партнеры
+          li.li__level1
+            a(href="#!").a__level1 Дилерам
+          li.li__level1
+            a(href="#!").a__level1 О компании
+          li.li__level1
+            a(href="#!").a__level1 Статьи
+          li.li__level1
+            a(href="#!").a__level1 Контакты
+      div
+        .header__nav-mobile
+          button(type="button").header__nav-btn
+            i.ion-navicon-round
+            i.ion-chevron-down
+          .header__nav-popup
+            ul
+              li.li__level2
+                a(href="#!").a__level2
+                  i.ion-ios-arrow-forward
+                  | Доставка
+              li.li__level2
+                a(href="#!").a__level2
+                  i.ion-ios-arrow-forward
+                  | Партнеры
+              li.li__level2
+                a(href="#!").a__level2
+                  i.ion-ios-arrow-forward
+                  | Дилерам
+              li.li__level2
+                a(href="#!").a__level2
+                  i.ion-ios-arrow-forward
+                  | О компании
+              li.li__level2
+                a(href="#!").a__level2
+                  i.ion-ios-arrow-forward
+                  | Статьи
+              li.li__level2
+                a(href="#!").a__level2
+                  i.ion-ios-arrow-forward
+                  | Контакты
