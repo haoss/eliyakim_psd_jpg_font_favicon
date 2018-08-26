@@ -86,6 +86,9 @@ button, html input[type=button], input[type=reset], input[type=submit]
     line-height: 1.25
     width: auto
     text-transform: uppercase
+    &--big
+      font-size: 40px
+      top: -28px
 
   &__checkbox
     position: relative
@@ -131,10 +134,20 @@ button, html input[type=button], input[type=reset], input[type=submit]
   &__border
     border: 4px solid $color-blue
     padding: 37px 37px 30px 37px
+    &--two
+      border-width: 8px
+      padding-top: 100px
+      padding-left: 25px
+      padding-right: 25px
+    &--three
+      border-width: 8px
+      padding-top: 70px
+      padding-left: 25px
+      padding-right: 25px
 
 textarea
   &.form-control, &.form__control
-    height: 150px
+    height: 100px
     resize: none
 
 label

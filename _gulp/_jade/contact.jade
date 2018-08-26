@@ -1,0 +1,244 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Контакты' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Контакты' + ' - Eliya' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content__head(style="background-image: url('./img/bg/bg-4.png');")
+      div
+        h1 Контакты
+        ul.breadcrumbs
+          li: a(href="#!") eliya
+          li: span Контакты
+    
+    .content 
+    
+      .section.no--p-top
+        .container
+          
+          .text-center 
+            h2 Мы рады поговорить с вами и помочь вам с вашим новым постельным бельем, для вашей квартиры/ресторана/гостиници - весь день, каждый день.
+          
+            .clear40
+            
+          .contact__btn
+            div
+              a(href="#popup1").btn.btn--medium.btn--block.open-popup-link Заказать звонок
+              .h5.no--m.text--upper +7 495 230 40 60
+              small Пн -Пт 9:00 - 21:00
+            div
+              a(href="#popup2").btn.btn--medium.btn--block.open-popup-link получить образцы 
+              .h5.no--m.text--upper бесплатные образцы
+              small 24 часа 7 дней в неделю
+            div
+              a(href="#popup3").btn.btn--medium.btn--block.open-popup-link заказать каталог
+              .h5.no--m.text--upper печатный и электронный
+              small 24 часа 7 дней в неделю
+    
+      .section.about
+        .container
+          
+          .row
+            .col-md-8
+              .about__content
+                .section__head.section__head--upper
+                  .h1 Eliakimgroup 
+                    i.small - мы всегда на связи!
+                
+                .row
+                  .col-xs-6.col-xxs-12
+                    .h5.text--upper Офис компании
+                    
+                    .contact__block
+                      i.ion-ios-location
+                      p г. Москва, ул.  Первая деловая, д.2, оф. 3
+                        br
+                        small
+                          a(href="#!" target="_blank") посмотреть на карте
+                    .contact__block
+                      i.ion-android-call
+                      a(href="tel:") +7 800 770 57 78
+                    .contact__block
+                      i.ion-android-call
+                      a(href="tel:") +7 495 230 40 60
+                    .contact__block
+                      i.ion-email
+                      a(href="mailto:") info@eliyagroup.com
+                    
+                  .col-xs-6.col-xxs-12
+                    .visible-xxs
+                      .clear30
+                        
+                    .h5.text--upper производственные мощности
+                    
+                    .contact__block
+                      i.ion-ios-location
+                      p г. Гунчжоу, ул.  Первая партийная, д.2, оф. 3
+                        br
+                        small
+                          a(href="#!" target="_blank") посмотреть на карте
+                    .contact__block
+                      i.ion-android-call
+                      a(href="tel:") +86 800 770 57 78
+                    .contact__block
+                      i.ion-android-call
+                      a(href="tel:") +86 495 230 40 60
+                    .contact__block
+                      i.ion-email
+                      a(href="mailto:") manufacture@eliyagroup.com
+                
+            .col-md-4
+              .visible-sm
+                .clear40
+                  
+              .about__carousel
+                .swiper-container
+                  .swiper-wrapper
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                    .swiper-slide
+                      img(src="./img/about/about-img-3.png", alt="").img-responsive
+                  // Add Pagination
+                  .swiper-pagination
+                  // Add Arrows
+                  .swiper-button-next
+                  .swiper-button-prev
+    
+      .section.no--p-bottom
+        .container
+          
+          .map
+            #map_canvas
+          
+          // Google Map
+          script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
+          script.
+            function initialize() {
+            var myLatlng = new google.maps.LatLng(55.7856969,37.6033213);
+            var map_options = {
+            zoom: 16,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: myLatlng,
+            scrollwheel: false,
+            disableDefaultUI: true
+            }
+            var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
+            var myIcon = new google.maps.MarkerImage('./img/map-marker.png', null, null, null, new google.maps.Size(69,90));
+            var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            icon: myIcon
+            });
+            /* Remove if you dont want B/W Google Map */
+            /*
+            var styles = [
+            {
+            featureType: "all",
+            stylers: [
+            { saturation: -100 }
+            ]
+            }
+            ];
+            map.setOptions({styles: styles});
+            */
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+          // Google Map Ends!
+
+          
+          p Наша фабрика ELIYA уже более 11 лет успешно осуществляет поставки всех видов текстиля для сетей отелей Marriott, InterContinental (IHG), Hilton, Wyndham, Accor и т.д. в страны Европы, Америки и Азии.
+          p Международная компания ELIYA (ЭЛИЯ) - теперь и в России. Более 3 000 отелей в более чем 130 странах мира уже 11 лет пользуются продукцией нашей компании.
+          p Собственное производство в г.Гуанчжоу и самое высокое качество продукции: постельное белье, полотенца, халаты, подушки, одеяла, наматрасники, покрывала, шторы, скатерти, чехлы и т.д. Бесплатно предоставляем образцы для тестирования: стандартные - в течение 2 дней, по индивидуальному заказу - в течение 10 дней. Также осуществляем комплексное снабжение отелей и ресторанов.
+    
+      .section.order
+        .container
+          
+          form(action="#").form.order__form
+            fieldset
+              legend.form__legend.form__legend--big напишите нам
+              .row
+                .col-sm-4
+                  .form-group.has-feedback
+                    label.hidden Ваше имя
+                    input(type="text" placeholder="Ваше имя").form-control.input-focus
+                    i.ion-alert-circled
+                  .form-group.has-feedback
+                    label.hidden E-mail
+                    input(type="text" placeholder="E-mail").form-control.input-focus
+                    i.ion-alert-circled
+                  .form-group.has-feedback.no--m
+                    label.hidden Телефон
+                    input(type="text" placeholder="Телефон").form-control.input-focus
+                    i.ion-alert-circled
+                .col-sm-8
+                  .visible-xs
+                    .clear20
+                  .form-group.has-feedback
+                    label.hidden Ваше сообщение
+                    textarea(placeholder="Ваше сообщение").form-control.input-focus
+                    i.ion-alert-circled
+                  
+                  .row.row--xxs-flex-column
+                    .col-sm-6.col-xs-5.col-xxs-12.col-xxs-order-2
+                      .visible-xxs
+                        .clear10
+                      label.form__checkbox.form__checkbox--inline-block
+                        input(type='checkbox', checked='')
+                        i.ion-android-checkbox-outline-blank
+                        i.ion-android-checkbox-outline
+                        span.span Согласен на обработку 
+                          a(href="#!") персональных
+                          | &nbsp; данных
+                    .col-sm-6.col-xs-7.col-xxs-12.col-xxs-order-1
+                      button(type="button").btn.btn--block Отправить сообщение
+                
+    
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

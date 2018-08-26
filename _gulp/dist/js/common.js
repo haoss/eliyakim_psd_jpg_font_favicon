@@ -53,7 +53,12 @@ $(document).on('ready', function(){
   $('.open-popup-link').magnificPopup({
     type: 'inline',
     midClick: true,
-    mainClass: 'mfp-bg-popup'
+    mainClass: 'mfp-bg-popup',
+    callbacks: {
+      open: function(e){
+        inputFocus();
+      }
+    }
   });
 
   aboutCarousel();
@@ -205,11 +210,16 @@ function clientsCarousel(){
 function inputFocus(){
   $('.input-focus').each(function(){
     var _this = $(this);
+
+    if (_this.val().length > 0) {
+      _this.parent().addClass('is-focus');
+    }
+
     _this.focus(function() {
-      _this.parents().addClass('is-focus');
+      _this.parent().addClass('is-focus');
     }).blur(function() {
       if (!_this.val().length > 0) {
-        _this.parents().removeClass('is-focus');
+        _this.parent().removeClass('is-focus');
       }
     });
   })

@@ -392,6 +392,7 @@
   max-width: 360px
   box-shadow: 0 0 46px rgba($color-black,.4)
   padding: 30px 40px 30px 40px
+  overflow: hidden
   .form
     margin-top: 60px
     &__border
@@ -439,6 +440,16 @@
         height: 4px
         background: $color-blue
         left: -39px
+      &.legend--two
+        position: absolute
+        font-size: 20px
+        font-family: $font-basker-sb
+        line-height: 24px
+        top: 30px
+        &::before, &::after
+          display: none
+    &--two
+      margin-top: -30px
   .mfp-close
     font-size: 0
     opacity: 1
@@ -654,3 +665,48 @@
           height: 50px
           .path-color
             fill: $color-white
+
+.map
+  margin-bottom: 45px
+  #map_canvas
+    position: relative
+    overflow: hidden
+    height: 0px
+    padding-bottom: 400px
+    background: white none repeat scroll 0% 0%
+
+.contact
+  &__block
+    font-size: 14px
+    position: relative
+    padding-left: 30px
+    min-height: 16px
+    font-family: $font-roboto-r
+    margin-bottom: 5px
+    [class*='ion-']
+      position: absolute
+      left: 0
+      top: 4px
+      line-height: 1
+      color: #a3a3a3
+      font-size: 14px
+      width: 13px
+      text-align: center
+    [href*='tel:'], [href*='mailto:']
+      text-decoration: none
+      color: $primary-color
+      &:hover, &:focus
+        color: $color-blue
+    p
+      &:last-child
+        margin-bottom: 0
+  &__btn
+    display: flex
+    text-align: center
+    margin: 0 -15px
+    &>div
+      width: 33.3%
+      padding: 0 15px
+    .btn
+      max-width: 260px
+      margin: 0 auto 15px

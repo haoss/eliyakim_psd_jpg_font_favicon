@@ -15,9 +15,10 @@
 @media only screen and (max-width : 1199px)
   .about
     &__content
-      p
-        &:last-of-type
-          display: none
+      &--hidden-p
+        p
+          &:last-of-type
+            display: none
   .order
     &__form
       padding-left: 43px
@@ -215,6 +216,9 @@
       padding-right: 0
       background: none
       margin-bottom: 25px
+      &--big
+        font-size: 30px
+        font-family: $font-basker-r
   .order
     &__form
       padding: 28px 24px
@@ -346,6 +350,17 @@
   .certificate
     &__gallery
       max-width: 305px
+  .contact
+    &__btn
+      flex-direction: column
+      align-items: center
+      &>div
+        width: 100%
+        max-width: 350px
+        &+div
+          padding-top: 20px
+      .btn
+        max-width: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -354,6 +369,8 @@
   .h2, h2
     font-size: 22px
     font-family: $font-basker-sb
+  .visible-xxs
+    display: block !important
   .hidden-xxs
     display: none !important
   .col-xxs-12
@@ -450,6 +467,26 @@
         bottom: -7px
   .photos
     padding: 0
+  .row
+    &--xxs-flex
+      display: flex
+      &>div
+        width: auto
+    &--xxs-flex-column
+      display: flex
+      flex-direction: column
+  .col-xxs
+    &-order-2
+      order: 2
+    &-order-1
+      order: 1
+  .contact
+    &__block
+      max-width: 90%
+  .popup
+    .form
+      legend.legend--two
+        font-size: 17px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

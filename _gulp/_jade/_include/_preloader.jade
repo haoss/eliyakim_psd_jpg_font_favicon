@@ -93,6 +93,62 @@ mixin mapMarker
             span.span Согласен на обработку 
               a(href="#!") персональных
               | &nbsp; данных
+              
+#popup2.popup.mfp-hide
+  .popup__wrapper
+    form(action="#").form.form--two
+      fieldset.form__border.form__border--two
+        legend.legend--two Заказать бесплатные образцы
+        .form-group.has-feedback
+          label.hidden Ваше имя
+          input(type="text" placeholder="Ваше имя" value="Иванов").form-control.input-focus
+          i.ion-alert-circled
+        .form-group.has-feedback.has-error
+          label.hidden Email
+          input(type="text" placeholder="Email" value="mail@yaa.rru").form-control.input-focus
+          i.ion-alert-circled
+        .form-group.has-feedback
+          label.hidden Телефон
+          input(type="text" placeholder="Телефон").form-control.input-focus
+          i.ion-alert-circled
+        .text-center
+          button(type="button").btn.btn--medium.btn--block отправить сообщение
+          .clear10
+          label.form__checkbox.form__checkbox--inline-block
+            input(type='checkbox', checked='')
+            i.ion-android-checkbox-outline-blank
+            i.ion-android-checkbox-outline
+            span.span Согласен на обработку 
+              a(href="#!") персональных
+              | &nbsp; данных
+              
+#popup3.popup.mfp-hide
+  .popup__wrapper
+    form(action="#").form.form--two
+      fieldset.form__border.form__border--three
+        legend.legend--two Заказать каталог
+        .form-group.has-feedback
+          label.hidden Ваше имя
+          input(type="text" placeholder="Ваше имя" value="Иванов").form-control.input-focus
+          i.ion-alert-circled
+        .form-group.has-feedback.has-error
+          label.hidden Email
+          input(type="text" placeholder="Email" value="mail@yaa.rru").form-control.input-focus
+          i.ion-alert-circled
+        .form-group.has-feedback
+          label.hidden Телефон
+          input(type="text" placeholder="Телефон").form-control.input-focus
+          i.ion-alert-circled
+        .text-center
+          button(type="button").btn.btn--medium.btn--block отправить сообщение
+          .clear10
+          label.form__checkbox.form__checkbox--inline-block
+            input(type='checkbox', checked='')
+            i.ion-android-checkbox-outline-blank
+            i.ion-android-checkbox-outline
+            span.span Согласен на обработку 
+              a(href="#!") персональных
+              | &nbsp; данных
 
 mixin sectionOrder
   .section.order
