@@ -61,6 +61,20 @@
           bottom: 233px
     &__block
       bottom: 47px
+  .certificate
+    .h1, h1
+      font-size: 35px
+  .our-production
+    .h1, h1
+      font-size: 43px
+  .photos
+    .swiper
+      &-slide
+        width: 320px
+  .certificate
+    &__gallery
+      .swiper-container
+        padding-bottom: 53px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -156,6 +170,27 @@
         margin-left: 30px
         span
           font-size: 9px
+  .content
+    &__head
+      min-height: 227px
+      h1, .h1
+        font-size: 55px
+  .our-production
+    padding-bottom: 40px
+    &__video
+      margin-bottom: 50px
+      margin-left: auto
+      margin-right: auto
+      max-width: 535px
+  .photos
+    .swiper
+      &-slide
+        width: 250px
+  .certificate
+    &__gallery
+      padding-left: 0
+      max-width: 620px
+      margin: 0 auto
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -287,6 +322,26 @@
         strong
           font-size: 43px
           margin-top: 8px
+  .content
+    &__head
+      min-height: 173px
+      h1, .h1
+        margin-bottom: 10px
+        font-size: 50px
+  .our-production
+    &__video
+      padding-right: 11px
+      &::before
+        top: -11px
+        bottom: -11px
+  .photos
+    padding: 20px 0
+    .swiper
+      &-slide
+        width: 240px
+  .certificate
+    &__gallery
+      max-width: 305px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -357,6 +412,7 @@
       margin-left: auto
       margin-right: auto
       margin-bottom: 17px
+      padding-top: 0
     &__nav
       .li__level1
         &:nth-child(4)
@@ -373,6 +429,20 @@
           bottom: 57px
     &__block
       bottom: 0
+  .content
+    &__head
+      h1, .h1
+        font-size: 25px
+  .our-production
+    .h1, h1
+      font-size: 30px
+    &__video
+      padding-right: 7px
+      &::before
+        top: -7px
+        bottom: -7px
+  .photos
+    padding: 0
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

@@ -11,6 +11,10 @@
       justify-content: center
       align-items: center
 
+.mfp-bg.mfp-bg-popup
+  background: $color-white
+  opacity: 0.5
+
 .more
   text-transform: uppercase
   color: $primary-color
@@ -443,3 +447,202 @@
     &:hover
       &::before
         color: $primary-color
+
+.breadcrumbs
+  margin: 0
+  padding: 0
+  font-family: $font-basker-i
+  color: $primary-color
+  &>li
+    display: inline-block
+    &:first-child
+      text-transform: uppercase
+    &+li
+      &::before
+        content: '/'
+        display: inline-block
+        margin-right: 5px
+    a
+      color: $primary-color
+      text-decoration: none
+      &:hover, &:focus
+        text-decoration: underline
+
+.certificate
+  background: $color-lightgray
+  font-size: 14px
+  p
+    line-height: 24px
+
+.our-production
+  padding-bottom: 0
+  &__video
+    position: relative
+    padding-right: 15px
+    margin-bottom: 30px
+    &::before
+      position: absolute
+      z-index: 2
+      border: 8px solid #eaeaea
+      left: 16px
+      top: -14px
+      right: 0
+      bottom: -14px
+      content: ''
+    &>div
+      position: relative
+      z-index: 5
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        border: 8px solid #646464
+      a
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        z-index: 10
+    .ion-social-youtube-outline
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      width: 68px
+      height: 68px
+      line-height: 68px
+      overflow: hidden
+      border-radius: 50%
+      color: $color-white
+      font-size: 30px
+      text-align: center
+      background: $color-blue
+
+.photos
+  padding: 35px 0
+  .swiper
+    &-slide
+      width: 390px
+      img
+        transition: opacity 0.35s
+        opacity: 0.3
+      &-active, &-next, &-prev
+        img
+          opacity: 1
+    &-container
+      .swiper-button
+        &-next
+          right: 34px
+          width: 35px
+          height: 70px
+          margin-top: -35px
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAABGCAYAAABG4C2wAAABY0lEQVRogc3XzU3EMBAF4AeiBSqihW0HpFDMdrFNQBl0AIfHgVhE0W7W9rz5sRQlY88knzK+GCQXkqhwgX+jBAgkv6uAQPJUBdQeSoC2QTpoP5EKujaZBrq1kAI6WgwH3UsIBfUkhYF6E0NAI8nuoNECV9BM0Rb0no1xA1mK5SDrC6Qgxe+VgayQ9nEJyIr5UIKsmGclSLFnZCAFRgZSYSQgJcYMUmNMIA/MNMgLMwXyxAyDvDFDoAhMNygK0wV6Qtz4AvAC4LLGb+v9DOAVAB4DMW08AOAuBoCwFrU2ffL/VHEi+bO2aYnewIeQKEwXJALTDfHGDEE8McMQL8wUxAMzDVFjTBAlxgxRYSQQBUYGUWBkEAVGBlFgZBAFRgaxYqQQC0YOmcW4QGYwbpBRjCtkBOMO6cWEQHowYZB7mFDIESYccguTArmGSYPsMamQLSYd0jAlIA1TAtIwJSANUwJCEr95JqvjXxYidQAAAABJRU5ErkJggg==') 0 0 no-repeat
+          pointer-events: all
+          &:focus
+            outline: none
+        &-prev
+          left: 34px
+          width: 35px
+          height: 70px
+          margin-top: -35px
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAABGCAYAAABG4C2wAAABUElEQVRogc3YQU7EMAwFUBdxBW7GfVDniMNtYPHZFOh0kjRO7f9jKYsktvTkbCIvAGySWA3ADGvFBIg/CIDvaSAA3qeBALBpICpMEaLAVCFsTBPCxJxCWJguCAPTDcnGuCCZGDckCzMEycAMQ6IxlyCRmMuQKEwIJAITBrmKKUFWBaYG+WRjWpA3JiYN4sWkQjyYdEgvhgLpwdAgZxgqpIWhQ2oYCaSEkUGOGClkj5FDfjFTQADYi5kt2xhrP09bDntObKrb1p2vXXduAO7sZ5oGdDyQgkqHMlDtQgJqXdJBZwlUUE8SDdSbSAF5ktNB3oJU0EhRGmi0sAWiY1ogCaYGkmFCQRGYMFAUJgQUibkMisYY/j/4blAGZhiUhRkCZWLcoGyMC8TAdINYmC4QE3MKYmOaIAWmClJhiiAl5gmkxjyA1JAH0Ct9OlWODzOzH5gRRvSaeLLEAAAAAElFTkSuQmCC') 0 0 no-repeat
+          pointer-events: all
+          &:focus
+            outline: none
+  .container
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: 0
+    bottom: 0
+    z-index: 5
+    padding: 0
+    pointer-events: none
+
+.certificate
+  &__gallery
+    padding-left: 18px
+    // padding-right: 20px
+    position: relative
+    &::before
+      position: absolute
+      z-index: 2
+      border: 8px solid #646464
+      left: 29px
+      top: 8px
+      right: 4px
+      bottom: 44px
+      content: ''
+    .swiper
+      &-container
+        padding-bottom: 60px
+        z-index: 5
+        padding-right: 20px
+      &-pagination
+        text-align: right
+        font-family: $font-basker-i
+        padding-right: 60px
+        color: #8b8b8b
+        font-size: 14px
+        bottom: 5px
+        .swiper-pagination
+          &-total
+            font-family: $font-basker-sbi
+            font-size: 20px
+            color: $primary-color
+      &-button-next
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAJCAYAAACvzAXAAAAAfElEQVQ4jc3TsQ3CQBBE0X8WLRC7FruZCSCCPogc7NTgItwKVAKR0Qkbp7cTrSZ60mpKRNAykr637StwAwZJr7XvGrj+RtIEPIDFdr/2qZCwD02HhC20RMS7NeogM3A+AaWloh5OHdsX4A6MKd9dAyU90yF/gZBsOHtAgA9MwC24ENHQ1gAAAABJRU5ErkJggg==') 0 0 no-repeat
+        width: 41px
+        height: 9px
+        top: inherit
+        bottom: 15px
+        right: 2px
+        &:focus
+          outline: none
+        &:hover
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAJCAYAAACvzAXAAAAAZ0lEQVQ4jc3OsRGCQBRF0bPONobtaKStUAC5BRjSCvZgrokwissQ/n+TN/OiU9yfEnXGBR0e81nDOO36z46+oNmQNKAZkaygFa9AzF43DBUlWrLRCVccD9GSjRYgpozIHyBkQ/4B4Q05KROwb7dclQAAAABJRU5ErkJggg==') 0 0 no-repeat
+      &-button-prev
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJCAYAAAA2NNx1AAAAaElEQVQokbXRuw2DQBBF0QPaQtwKRZCTbeRSnBlpqjG1ENMECUgExuKzvtHTBCeZKiJseuCDF3oHyjl/vdd30F+tcFF0hYujUEXEgAltKRQSOgx44n0W2HtewohmwV3B92D/wNNmF8Vn8CsZkdqQV+MAAAAASUVORK5CYII=') 0 0 no-repeat
+        width: 22px
+        height: 9px
+        bottom: 15px
+        top: inherit
+        right: 121px
+        left: inherit
+        &:focus
+          outline: none
+        &:hover
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJCAYAAAA2NNx1AAAAYElEQVQokbXOsRFAQBAF0HfmClGEBhQh14BSZNQioxaxVAECzFxu/Zmd3ejtT5ZTkRorRsw+pPoDLeFQ9IXDUUiWc8OBLgrlbtyjwYAUNRk7WmzPsymicX52OJ6LOxS/AB5GFd+d/U0+AAAAAElFTkSuQmCC') 0 0 no-repeat
+    .gallery-item
+      position: relative
+      display: inline-block
+      box-shadow: 0 0 0 rgba($color-black,.2)
+      transition: all 0.35s
+      &:hover
+        box-shadow: 13px 13px 20px rgba($color-black,.2)
+        &>span
+          visibility: visible
+          opacity: 1
+      &>span
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        background: rgba($color-blue,.6)
+        border: 10px solid rgba($color-white,.7)
+        opacity: 0
+        visibility: hidden
+        transition: all 0.35s
+        svg
+          width: 50px
+          height: 50px
+          .path-color
+            fill: $color-white

@@ -49,6 +49,7 @@ body
   letter-spacing: -1px
   margin-bottom: 20px
   font-family: $font-basker-r
+  text-transform: uppercase
 
 .h2, h2
   font-size: 30px
@@ -281,3 +282,46 @@ ol li
 
 .content
   padding: 45px 0 55px 0
+  &__head
+    background:
+      color: $color-lightblue
+      position: center top
+      size: cover
+      repeat: no-repeat
+    color: $color-white
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 300px
+    position: relative
+    text-align: center
+    padding: 25px 0
+    &::before
+      position: absolute
+      content: ''
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: rgba($color-blue,.6)
+    &>div
+      position: relative
+      z-index: 5
+    .h1, h1
+      font-size: 65px
+      color: $color-white
+      line-height: 0.85
+      text-transform: uppercase
+    .breadcrumbs
+      color: $color-white
+      position: relative
+      &::before
+        content: ''
+        height: 1px
+        width: 60px
+        display: block
+        background: #b8d5f3
+        margin: 0 auto 8px
+      &>li
+        a
+          color: $color-white

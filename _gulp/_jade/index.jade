@@ -79,34 +79,7 @@ html(lang="ru")
       
     .content.no--p-top 
       
-      .section.advantages
-        .container
-          
-          .advantages__row
-            div
-              .advantages__block
-                div
-                  +advantagesIcon1
-                div
-                  p Снабжение ресторанов и отелей под ключ
-            div
-              .advantages__block
-                div
-                  +advantagesIcon2
-                div
-                  p Собственное производство и склад в Москве
-            div
-              .advantages__block
-                div
-                  +advantagesIcon3
-                div
-                  p Товар самого высокого качества
-            div
-              .advantages__block
-                div
-                  +advantagesIcon4
-                div
-                  p Отправка продукции во все страны
+      +sectionAdvantages
       
       .section.main-catalog
         .container
@@ -255,39 +228,7 @@ html(lang="ru")
           
           a(href="#!").more.more--light Все клиенты
     
-      .section.order
-        .container
-          
-          form(action="#").form.order__form
-            fieldset
-              legend.form__legend Заказать  бесплатные  образцы
-              .row
-                .col-sm-4
-                  .form-group.has-feedback
-                    label.hidden Ваше имя
-                    input(type="text" placeholder="Ваше имя").form-control.input-focus
-                    i.ion-alert-circled
-                .col-sm-4
-                  .form-group.has-feedback
-                    label.hidden E-mail
-                    input(type="text" placeholder="E-mail").form-control.input-focus
-                    i.ion-alert-circled
-                .col-sm-4
-                  .form-group.has-feedback
-                    label.hidden Телефон
-                    input(type="text" placeholder="Телефон").form-control.input-focus
-                    i.ion-alert-circled
-              .clear10
-              .text-center
-                button(type="button").btn.btn--big Отправить сообщение
-                .clear10
-                label.form__checkbox.form__checkbox--inline-block
-                  input(type='checkbox', checked='')
-                  i.ion-android-checkbox-outline-blank
-                  i.ion-android-checkbox-outline
-                  span.span Согласен на обработку 
-                    a(href="#!") персональных
-                    | &nbsp; данных
+      +sectionOrder
     
     include ./_include/_footer
     

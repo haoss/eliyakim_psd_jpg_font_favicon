@@ -93,3 +93,74 @@ mixin mapMarker
             span.span Согласен на обработку 
               a(href="#!") персональных
               | &nbsp; данных
+
+mixin sectionOrder
+  .section.order
+    .container
+      
+      form(action="#").form.order__form
+        fieldset
+          legend.form__legend Заказать  бесплатные  образцы
+          .row
+            .col-sm-4
+              .form-group.has-feedback
+                label.hidden Ваше имя
+                input(type="text" placeholder="Ваше имя").form-control.input-focus
+                i.ion-alert-circled
+            .col-sm-4
+              .form-group.has-feedback
+                label.hidden E-mail
+                input(type="text" placeholder="E-mail").form-control.input-focus
+                i.ion-alert-circled
+            .col-sm-4
+              .form-group.has-feedback
+                label.hidden Телефон
+                input(type="text" placeholder="Телефон").form-control.input-focus
+                i.ion-alert-circled
+          .clear10
+          .text-center
+            button(type="button").btn.btn--big Отправить сообщение
+            .clear10
+            label.form__checkbox.form__checkbox--inline-block
+              input(type='checkbox', checked='')
+              i.ion-android-checkbox-outline-blank
+              i.ion-android-checkbox-outline
+              span.span Согласен на обработку 
+                a(href="#!") персональных
+                | &nbsp; данных
+
+mixin sectionAdvantages
+  .section.advantages
+    .container
+      
+      .advantages__row
+        div
+          .advantages__block
+            div
+              +advantagesIcon1
+            div
+              p Снабжение ресторанов и отелей под ключ
+        div
+          .advantages__block
+            div
+              +advantagesIcon2
+            div
+              p Собственное производство и склад в Москве
+        div
+          .advantages__block
+            div
+              +advantagesIcon3
+            div
+              p Товар самого высокого качества
+        div
+          .advantages__block
+            div
+              +advantagesIcon4
+            div
+              p Отправка продукции во все страны
+
+mixin iconZoom
+  svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 35.391 35.391')
+    path.path-color(d='M17.695 35.391C7.938 35.391 0 27.454 0 17.696S7.938 0 17.695 0c9.758 0 17.696 7.938 17.696 17.696s-7.938 17.695-17.696 17.695zm0-34.191C8.602 1.2 1.199 8.602 1.199 17.696c0 9.093 7.403 16.496 16.496 16.496 9.094 0 16.496-7.403 16.496-16.496 0-9.094-7.402-16.496-16.496-16.496zm0 0M10.242 17.696h14.903')
+    path.path-color(d='M25.145 18.293H10.242a.597.597 0 0 1-.597-.597.6.6 0 0 1 .597-.602h14.903c.332 0 .601.27.601.602a.598.598 0 0 1-.601.597zm0 0')
+    path.path-color(d='M17.695 25.746a.6.6 0 0 1-.601-.601V10.243a.601.601 0 1 1 1.203 0v14.902c0 .332-.27.601-.602.601zm0 0')

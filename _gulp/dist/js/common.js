@@ -9,7 +9,8 @@ $(document).on('ready', function(){
       delegate: '.gallery-item',
       type: 'image',
       gallery:{
-        enabled:true
+        enabled: true,
+        tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
       },
       zoom: {
         enabled: true, // By default it's false, so don't forget to enable it
@@ -51,13 +52,16 @@ $(document).on('ready', function(){
 
   $('.open-popup-link').magnificPopup({
     type: 'inline',
-    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    midClick: true,
+    mainClass: 'mfp-bg-popup'
   });
 
   aboutCarousel();
   clientsCarousel();
   inputFocus();
   mainSlider();
+  aboutGallery();
+  certificateGallery();
 
   // Chrome Smooth Scroll
   try {
@@ -236,9 +240,67 @@ function mainSlider(){
       prevEl: '.main-carousel .swiper-button-prev',
     },
     effect: 'fade',
-    // autoplay: {
-    //   delay: 4000,
-    // },
-    // loop: true
+    autoplay: {
+      delay: 4000,
+    },
+    loop: true
+  });
+}
+
+function aboutGallery(){
+  var swiper = new Swiper('.photos .swiper-container', {
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.photos .swiper-button-next',
+      prevEl: '.photos .swiper-button-prev',
+    },
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    breakpoints: {
+      767: {
+        slidesPerView: 2
+      },
+      479: {
+        slidesPerView: 1
+      }
+    }
+  });
+}
+
+function certificateGallery(){
+  var swiper = new Swiper('.certificate__gallery .swiper-container', {
+    spaceBetween: 30,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    navigation: {
+      nextEl: '.certificate__gallery .swiper-button-next',
+      prevEl: '.certificate__gallery .swiper-button-prev',
+    },
+    loop: true,
+    pagination: {
+      el: '.certificate__gallery .swiper-pagination',
+      type: 'fraction',
+      formatFractionCurrent: function(number) {
+        if (number > 0 && number < 10) {
+          return '0' + number
+        } else {
+          return number
+        }
+      },
+      formatFractionTotal: function(number) {
+        if (number > 0 && number < 10) {
+          return '0' + number
+        } else {
+          return number
+        }
+      }
+    },
+    breakpoints: {
+      767: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      }
+    }
   });
 }
