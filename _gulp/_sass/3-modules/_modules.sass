@@ -794,3 +794,38 @@
         outline: none
       &:hover
         background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJCAYAAAA2NNx1AAAAYElEQVQokbXOsRFAQBAF0HfmClGEBhQh14BSZNQioxaxVAECzFxu/Zmd3ejtT5ZTkRorRsw+pPoDLeFQ9IXDUUiWc8OBLgrlbtyjwYAUNRk7WmzPsymicX52OJ6LOxS/AB5GFd+d/U0+AAAAAElFTkSuQmCC') 0 0 no-repeat
+
+.news
+  &__block
+    font-size: 14px
+    margin-bottom: 40px
+    &-img
+      overflow: hidden
+      margin-bottom: 24px
+      img
+        opacity: 1
+        transition: opacity 0.35s
+    &-title
+      text-decoration: none
+      color: $primary-color
+      text-transform: uppercase
+      font-size: 16px
+      font-family: $font-roboto-m
+      margin-bottom: 5px
+      display: inline-block
+    &:hover
+      .news__block-img
+        img
+          opacity: 0.3
+    .time
+      font-size: 10px
+      text-transform: uppercase
+      margin-bottom: 10px
+    p
+      line-height: 24px
+      margin: 0
+
+.row
+  &--flex
+    display: flex
+    flex-wrap: wrap

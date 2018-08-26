@@ -1,0 +1,94 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Новости' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Новости' + ' - Eliya' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content__head(style="background-image: url('./img/bg/bg-6.png');")
+      div
+        h1 Новости
+        ul.breadcrumbs
+          li: a(href="#!") eliya
+          li: span Новости
+    
+    .content 
+      .container
+        
+        .new.row.row--flex
+          .col-sm-6
+            .news__block
+              .news__block-img
+                a(href="#!")
+                  img(src="./img/news/news-img-1.png", alt="").img-responsive
+              a(href="#!").news__block-title Информационное название новости
+              .time /10 июля 2018/
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана... 
+          .col-sm-6
+            .news__block
+              .news__block-img
+                a(href="#!")
+                  img(src="./img/news/news-img-2.png", alt="").img-responsive
+              a(href="#!").news__block-title Информационное название новости
+              .time /10 июля 2018/
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана... 
+          .col-sm-6
+            .news__block
+              .news__block-img
+                a(href="#!")
+                  img(src="./img/news/news-img-3.png", alt="").img-responsive
+              a(href="#!").news__block-title Информационное название новости
+              .time /10 июля 2018/
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана... 
+          .col-sm-6
+            .news__block
+              .news__block-img
+                a(href="#!")
+                  img(src="./img/news/news-img-4.png", alt="").img-responsive
+              a(href="#!").news__block-title Информационное название новости
+              .time /10 июля 2018/
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана... 
+          .col-sm-6
+            .news__block
+              .news__block-img
+                a(href="#!")
+                  img(src="./img/news/news-img-5.png", alt="").img-responsive
+              a(href="#!").news__block-title Информационное название новости
+              .time /10 июля 2018/
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана... 
+          .col-sm-6
+            .news__block
+              .news__block-img
+                a(href="#!")
+                  img(src="./img/news/news-img-6.png", alt="").img-responsive
+              a(href="#!").news__block-title Информационное название новости
+              .time /10 июля 2018/
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана... 
+              
+    
+        +pagination
+    
+      +sectionOrder
+    
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
