@@ -159,9 +159,9 @@
 
 .about
   background: $color-lightgray
-  font-size: 14px
-  font-family: $font-roboto-l
   &__content
+    font-family: $font-roboto-l
+    font-size: 14px
     p
       line-height: 24px
   &__carousel
@@ -287,7 +287,7 @@
       box-shadow: 0 13px 20px rgba($color-black,.2)
       &::before
         background: rgba($color-blue,.8)
-      .main-catalog
+      .catalog
         &__block
           &-title
             color: $color-white
@@ -321,6 +321,10 @@
         text-transform: lowercase
         transition: color 0.35s
         color: $primary-color
+      &--catalog
+        font-size: 38px
+        small
+          font-size: 28px
     &-text
       font-family: $font-basker-i
       position: absolute
@@ -332,7 +336,11 @@
       line-height: 20px
       top: 34px
       left: 41px
+      max-width: 270px
       transition: all 0.35s
+      &--lgAuto
+        max-width: none
+
       &::before
         content: ''
         position: absolute

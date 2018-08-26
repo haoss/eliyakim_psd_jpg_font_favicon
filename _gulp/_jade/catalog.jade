@@ -1,0 +1,129 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Каталог' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Каталог' + ' - Eliya' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content__head(style="background-image: url('./img/bg/bg-2.png');")
+      div
+        h1 Каталог
+        ul.breadcrumbs
+          li: a(href="#!") eliya
+          li: span Каталог
+    
+    .content 
+      .catalog.no--p
+        .container
+          
+          .text-center
+            h2 Мы рады помочь вам и помочь вашему бизнесу, нашим новым постельным бельем, для вашей квартиры/ресторана/гостиници - весь день, каждый день.
+
+          .clear40
+
+          .row
+            .col-sm-4
+              .catalog__block(style="background-image: url('./img/catalog/catalog-img-1.png')")
+                a(href="#!")
+                .catalog__block-text Легкое, словно перышко. Нежное тепло прикосновения.
+                .catalog__block-title.catalog__block-title--catalog 
+                  small качественное 
+                  | постельное белье
+            .col-sm-4
+              .catalog__block(style="background-image: url('./img/catalog/catalog-img-2.png')")
+                a(href="#!")
+                .catalog__block-text Лучшее предложение, для 
+                  br
+                  | самых дорогих гостей.
+                .catalog__block-title.catalog__block-title--catalog 
+                  small для 
+                  | ресторанов
+            .col-sm-4
+              .catalog__block(style="background-image: url('./img/catalog/catalog-img-5.png')")
+                a(href="#!")
+                .catalog__block-text Изюминка вашего сервиса.
+                .catalog__block-title.catalog__block-title--catalog 
+                  small отельная 
+                  | косметика
+            .col-sm-4
+              .catalog__block(style="background-image: url('./img/catalog/catalog-img-3.png')")
+                a(href="#!")
+                .catalog__block-text Ухаживайте за клиентом 
+                  br
+                  | стильно.
+                .catalog__block-title.catalog__block-title--catalog 
+                  small разнообразные
+                  | халаты
+            .col-sm-4
+              .catalog__block(style="background-image: url('./img/catalog/catalog-img-4.png')")
+                a(href="#!")
+                .catalog__block-text Красивый и нежный 
+                  br
+                  | текстиль для ванной.
+                .catalog__block-title.catalog__block-title--catalog 
+                  small лучшие 
+                  | полотенца
+            .col-sm-4
+              .catalog__block(style="background-image: url('./img/catalog/catalog-img-4.png')")
+                a(href="#!")
+                .catalog__block-text Красивое тематическое сопровождение.
+                .catalog__block-title.catalog__block-title--catalog 
+                  small лучшие 
+                  | категория 6
+            .col-sm-4
+              .catalog__block(style="background-image: url('./img/catalog/catalog-img-4.png')")
+                a(href="#!")
+                .catalog__block-text Красивое тематическое сопровождение.
+                .catalog__block-title.catalog__block-title--catalog 
+                  small лучшие 
+                  | категория 7
+            .col-sm-4
+              .catalog__block(style="background-image: url('./img/catalog/catalog-img-4.png')")
+                a(href="#!")
+                .catalog__block-text Красивое тематическое сопровождение.
+                .catalog__block-title.catalog__block-title--catalog 
+                  small лучшие 
+                  | категория 8
+            .col-sm-4
+              .catalog__block(style="background-image: url('./img/catalog/catalog-img-4.png')")
+                a(href="#!")
+                .catalog__block-text Красивое тематическое сопровождение.
+                .catalog__block-title.catalog__block-title--catalog 
+                  small лучшие 
+                  | категория 9
+        
+      .container
+        .clear25
+        
+        .section__head.section__head--upper.section__head--f26
+          .h1 наш каталог продукции
+        
+        .about__content
+          p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. 
+          p Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. 
+          p Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку.
+    
+      +sectionOrder
+    
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
