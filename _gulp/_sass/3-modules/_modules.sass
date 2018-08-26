@@ -710,3 +710,87 @@
     .btn
       max-width: 260px
       margin: 0 auto 15px
+
+.partners
+  &__block
+    height: 230px
+    width: 100%
+    // max-width: 263px
+    position: relative
+    border: 6px solid #fafafa
+    margin-bottom: 52px
+    transition: border 0.35s
+    display: flex
+    justify-content: center
+    align-items: center
+    &:hover
+      border-color: $color-lightblue
+    a
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+    .span
+      position: absolute
+      left: 0
+      right: 0
+      top: calc(100% - 8px)
+      font-size: 16px
+      color: #878787
+      text-transform: uppercase
+      font-family: $font-roboto-r
+      text-align: center
+      span
+        line-height: 1.2
+        max-width: 152px
+        display: inline-block
+        background: $color-white
+        padding: 0 5px
+
+.pagination
+  text-align: center
+  display: block
+  font-size: 20px
+  font-family: $font-basker-i
+  color: #8b8b8b
+  margin: 0
+  padding: 0 0 30px 0
+  ul
+    margin: 0
+    padding: 0
+    li
+      list-style: none
+      display: inline-block
+      &+li
+        margin-left: -4px
+  &__active
+    font-size: 14px
+    color: #8b8b8b
+  &__total
+    font-family: $font-basker-sbi
+    color: #232323
+  &__right
+    padding-left: 16px
+    i
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAJCAYAAACvzAXAAAAAfElEQVQ4jc3TsQ3CQBBE0X8WLRC7FruZCSCCPogc7NTgItwKVAKR0Qkbp7cTrSZ60mpKRNAykr637StwAwZJr7XvGrj+RtIEPIDFdr/2qZCwD02HhC20RMS7NeogM3A+AaWloh5OHdsX4A6MKd9dAyU90yF/gZBsOHtAgA9MwC24ENHQ1gAAAABJRU5ErkJggg==') 0 0 no-repeat
+      width: 41px
+      height: 9px
+      display: inline-block
+      vertical-align: 2px
+      &:focus
+        outline: none
+      &:hover
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAJCAYAAACvzAXAAAAAZ0lEQVQ4jc3OsRGCQBRF0bPONobtaKStUAC5BRjSCvZgrokwissQ/n+TN/OiU9yfEnXGBR0e81nDOO36z46+oNmQNKAZkaygFa9AzF43DBUlWrLRCVccD9GSjRYgpozIHyBkQ/4B4Q05KROwb7dclQAAAABJRU5ErkJggg==') 0 0 no-repeat
+  &__left
+    padding-right: 17px
+    i
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJCAYAAAA2NNx1AAAAaElEQVQokbXRuw2DQBBF0QPaQtwKRZCTbeRSnBlpqjG1ENMECUgExuKzvtHTBCeZKiJseuCDF3oHyjl/vdd30F+tcFF0hYujUEXEgAltKRQSOgx44n0W2HtewohmwV3B92D/wNNmF8Vn8CsZkdqQV+MAAAAASUVORK5CYII=') 0 0 no-repeat
+      width: 22px
+      height: 9px
+      display: inline-block
+      vertical-align: 2px
+      &:focus
+        outline: none
+      &:hover
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJCAYAAAA2NNx1AAAAYElEQVQokbXOsRFAQBAF0HfmClGEBhQh14BSZNQioxaxVAECzFxu/Zmd3ejtT5ZTkRorRsw+pPoDLeFQ9IXDUUiWc8OBLgrlbtyjwYAUNRk7WmzPsymicX52OJ6LOxS/AB5GFd+d/U0+AAAAAElFTkSuQmCC') 0 0 no-repeat

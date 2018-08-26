@@ -1,0 +1,93 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Партнеры' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Партнеры' + ' - Eliya' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content__head(style="background-image: url('./img/bg/bg-5.png');")
+      div
+        h1 Партнеры
+        ul.breadcrumbs
+          li: a(href="#!") eliya
+          li: span Партнеры
+    
+    .content 
+      .container
+        
+        .partners.row
+          .col-md-3.col-xs-6.col-xxs-12
+            .partners__block
+              a(href="#!")
+              img(src="./img/clients/client-1.png", alt="")
+              .span
+                span president hotel
+          .col-md-3.col-xs-6.col-xxs-12
+            .partners__block
+              a(href="#!")
+              img(src="./img/clients/client-2.png", alt="")
+              .span
+                span отель Москва
+          .col-md-3.col-xs-6.col-xxs-12
+            .partners__block
+              a(href="#!")
+              img(src="./img/clients/client-3.png", alt="")
+              .span
+                span hotel cosmos
+          .col-md-3.col-xs-6.col-xxs-12
+            .partners__block
+              a(href="#!")
+              img(src="./img/clients/client-4.png", alt="")
+              .span
+                span lotte hotel moscow
+          .col-md-3.col-xs-6.col-xxs-12
+            .partners__block
+              a(href="#!")
+              img(src="./img/clients/client-5.png", alt="")
+              .span
+                span marriot hotel
+          .col-md-3.col-xs-6.col-xxs-12
+            .partners__block
+              a(href="#!")
+              img(src="./img/clients/client-6.png", alt="")
+              .span
+                span Москва hotel
+          .col-md-3.col-xs-6.col-xxs-12
+            .partners__block
+              a(href="#!")
+              img(src="./img/clients/client-7.png", alt="")
+              .span
+                span hotel sheraton
+          .col-md-3.col-xs-6.col-xxs-12
+            .partners__block
+              a(href="#!")
+              img(src="./img/clients/client-8.png", alt="")
+              .span
+                span radisson hotel
+    
+        +pagination
+    
+      +sectionOrder
+    
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

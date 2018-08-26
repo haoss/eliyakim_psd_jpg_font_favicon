@@ -290,3 +290,14 @@ mixin sectionSertificate
               .swiper-pagination
               .swiper-button-prev
               .swiper-button-next
+
+mixin pagination
+  .pagination
+    ul
+      li.pagination__left: a(href="#!")
+        i
+      li.pagination__active: span 01
+      li /
+      li.pagination__total: span 99
+      li.pagination__right: a(href="#!")
+        i
