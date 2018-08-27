@@ -67,6 +67,7 @@ $(document).on('ready', function(){
   mainSlider();
   aboutGallery();
   certificateGallery();
+  faq();
 
   // Chrome Smooth Scroll
   try {
@@ -312,5 +313,30 @@ function certificateGallery(){
         slidesPerGroup: 1,
       }
     }
+  });
+}
+
+function faq(){
+  var faqBlock = $('.faq__block'),
+      faqBlockAnswer = $('.faq__block-answer'),
+      faqBlockTitle = $('.faq__block-title');
+
+  $(faqBlock).each(function(){
+    var _this = $(this);
+    if (_this.hasClass('is-active')) {
+      _this.find('.faq__block-answer').show();
+    }
+  });
+
+  faqBlockTitle.on('click', function(e){
+    e.preventDefault();
+    var _this = $(this);
+
+    faqBlock.removeClass('is-active');
+    $('.faq__block-answer').stop().slideUp();
+
+    _this.parents(faqBlock).addClass('is-active');
+    _this.next(faqBlockAnswer).stop().slideDown();
+
   });
 }

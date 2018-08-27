@@ -829,3 +829,78 @@
   &--flex
     display: flex
     flex-wrap: wrap
+
+.faq
+  &__block
+    margin-bottom: 10px
+    font-size: 14px
+    &.is-active
+      .faq__block-title
+        color: $color-white
+        background: $color-blue
+        i
+          color: $color-white
+          &::after
+            content: "\f209"
+        .span
+          color: $color-white
+          background: #175ea6
+    p
+      line-height: 24px
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+    &.is-active
+      margin-bottom: 10px
+    &-answer
+      display: none
+      div
+        padding: 20px 36px 20px 38px
+        font-family: $font-roboto-l
+        border-left: 4px solid #fafafa
+        border-right: 4px solid #fafafa
+        border-bottom: 4px solid #fafafa
+        p
+          line-height: 22px
+          margin-bottom: 25px
+          &:last-child
+            margin-bottom: 0
+    &-title
+      background: #fafafa
+      transition: background 0.35s
+      font-family: $font-roboto-m
+      color: $primary-color
+      padding: 8px 40px 8px 60px
+      cursor: pointer
+      position: relative
+      min-height: 40px
+      line-height: 22px
+      font-size: 16px
+      font-family: $font-roboto-m
+      i
+        color: $color-blue
+        position: absolute
+        right: 13px
+        top: 50%
+        font-style: normal
+        transform: translateY(-50%)
+        &::after
+          content: "\f218"
+          font-family: $font-ionicons
+          line-height: 1
+          display: inline-block
+      .span
+        position: absolute
+        top: 0
+        left: 0
+        width: 40px
+        text-align: center
+        bottom: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        color: $primary-color
+        font-size: 16px
+        font-family: $font-basker-b
+        background: #e8e8e8
+        transition: all 0.35s
