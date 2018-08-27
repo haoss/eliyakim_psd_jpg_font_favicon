@@ -904,3 +904,36 @@
         font-family: $font-basker-b
         background: #e8e8e8
         transition: all 0.35s
+
+.delivery
+  &__block
+    margin-bottom: 45px
+    overflow: hidden
+    img.img-responsive
+      margin: 0 auto
+
+.panel-group
+  .panel
+    border: 0
+    box-shadow: none
+    &-heading
+      padding: 0
+    &-title
+      font-size: 16px
+      font-family: $font-roboto-m
+      &>a
+        text-decoration: none
+        display: inline-block
+        border-bottom: 1px dashed #aeaeae
+        &[aria-expanded="true"]
+          color: $color-blue
+          border-bottom-color: transparent
+    &-body
+      border: 0 !important
+      font-style: italic
+      font-size: 14px
+      border-left: 1px solid $color-blue !important
+      line-height: 24px
+      padding: 10px 0 10px 17px
+    &+.panel
+      margin-top: 10px

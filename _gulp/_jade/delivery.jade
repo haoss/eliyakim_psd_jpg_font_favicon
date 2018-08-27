@@ -1,0 +1,133 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Доставка' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Доставка' + ' - Eliya' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content__head(style="background-image: url('./img/bg/bg-8.png');")
+      div
+        h1 Доставка
+        ul.breadcrumbs
+          li: a(href="#!") eliya
+          li: span Доставка
+    
+    .content 
+      .container
+        
+        .delivery
+          .delivery__block
+            .row
+              .col-sm-8
+                .section__head.section__head--upper
+                  h2 Бесплатно курьером
+                  
+                p Доставка по Москве нашей курьерской службой бесплатная, независимо от суммы заказа.
+                p Все заказы, оформленные в будние дни до 7 часов утра – в г. Москве доставляются в тот же день. Заказы, принятые позже, доставляются на следующий рабочий день.  В субботу и праздничные дни заказы, оформленные до 06:00, доставляются курьером в тот же день. Ожидать курьера в эти дни вы можете с 11 до 18 часов.
+                p Пожалуйста, для своевременного подтверждения доставки курьером будьте на связи по вашему контактному номеру телефона.
+                p Перед доставкой наши менеджеры обязательно согласуют с вами детали доставки, а наш курьер предварительно созвонится с вами!
+                
+              .col-sm-4
+                img(src="./img/delivery/delivery-img-1.png", alt="").img-responsive
+    
+          .delivery__block
+            .row
+              .col-sm-8
+                .section__head.section__head--upper
+                  h2 Самовывоз
+                  
+                p Заказ хранится на пункте самовывоза на протяжении 2х рабочих дней, на третий день заказ отправляется обратно.
+                p В выходные и праздничные дни графики работы пунктов доставки могут изменяться. Пожалуйста, следите за информацией на сайте. Все изменения графика работы будут указаны в разделах сайта о доставке и предоставлены в телефонном режиме. 
+                
+                #accordion.panel-group(role='tablist', aria-multiselectable='true')
+                  .panel
+                    #headingOne.panel-heading(role='tab')
+                      .panel-title
+                        a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                          | Москва
+                    #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+                      .panel-body
+                        | Вы сможете получить заказы по адресу: ул. Суздальские ряды 9, Торговый центр " Дом торговли" 2 этаж старое крыло, с главной лестницы - направо, время работы: понедельник 8:00-15:00, вторник-пятница 8:00-17:00. 
+                  .panel
+                    #headingTwo.panel-heading(role='tab')
+                      .panel-title
+                        a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                          | МКАД
+                    #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+                      .panel-body
+                        | Вы сможете получить заказы по адресу: ул. Суздальские ряды 9, Торговый центр " Дом торговли" 2 этаж старое крыло, с главной лестницы - направо, время работы: понедельник 8:00-15:00, вторник-пятница 8:00-17:00. 
+                  .panel
+                    #headingThree.panel-heading(role='tab')
+                      .panel-title
+                        a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                          | Юго-Западный округ
+                    #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+                      .panel-body
+                        | Вы сможете получить заказы по адресу: ул. Суздальские ряды 9, Торговый центр " Дом торговли" 2 этаж старое крыло, с главной лестницы - направо, время работы: понедельник 8:00-15:00, вторник-пятница 8:00-17:00. 
+                  .panel
+                    #headingFour.panel-heading(role='tab')
+                      .panel-title
+                        a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+                          | Западный округ
+                    #collapseFour.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFour')
+                      .panel-body
+                        | Вы сможете получить заказы по адресу: ул. Суздальские ряды 9, Торговый центр " Дом торговли" 2 этаж старое крыло, с главной лестницы - направо, время работы: понедельник 8:00-15:00, вторник-пятница 8:00-17:00. 
+                  .panel
+                    #headingFive.panel-heading(role='tab')
+                      .panel-title
+                        a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
+                          | Северо-Западный округ
+                    #collapseFive.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFive')
+                      .panel-body
+                        | Вы сможете получить заказы по адресу: ул. Суздальские ряды 9, Торговый центр " Дом торговли" 2 этаж старое крыло, с главной лестницы - направо, время работы: понедельник 8:00-15:00, вторник-пятница 8:00-17:00. 
+                  .panel
+                    #headingSix.panel-heading(role='tab')
+                      .panel-title
+                        a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
+                          | Зеленоградский округ
+                    #collapseSix.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingSix')
+                      .panel-body
+                        | Вы сможете получить заказы по адресу: ул. Суздальские ряды 9, Торговый центр " Дом торговли" 2 этаж старое крыло, с главной лестницы - направо, время работы: понедельник 8:00-15:00, вторник-пятница 8:00-17:00. 
+
+                
+              .col-sm-4
+                img(src="./img/delivery/delivery-img-2.png", alt="").img-responsive
+    
+          .delivery__block
+            .row
+              .col-sm-8
+                .section__head.section__head--upper
+                  h2 Интайм
+                  
+                p При сумме заказа до 1990 руб стоимость доставки всего 290 руб, при сумме заказа от 1990 руб до 4990 руб - всего 150 руб, при сумме заказа свыше 4990 руб доставка бесплатная!
+                p При доставке компанией "Интайм" ваш заказ будет отправлен на следующий день после заказа. Доставка занимает от 1 до 3 дней.
+                p Оплатить заказ вы сможете при помощи карт VISA/Mastercard или наличными в отделении "Интайм". Никаких скрытых платежей, оплаты услуг транспортной компании, платы за перевод денег, комиссий и прочее! Вы оплачиваете только сумму вашего заказа.
+                p Заказы с доставкой через Интайм принимаются согласно графику работы перевозчика.
+                
+              .col-sm-4
+                img(src="./img/delivery/delivery-img-3.png", alt="").img-responsive
+    
+      +sectionOrder
+    
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
