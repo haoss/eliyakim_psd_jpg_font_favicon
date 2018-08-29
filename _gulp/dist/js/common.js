@@ -42,7 +42,6 @@ $(document).on('ready', function(){
 
   // Magnific popup video
   $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
     type: 'iframe',
     mainClass: 'mfp-fade',
     removalDelay: 160,
@@ -68,6 +67,7 @@ $(document).on('ready', function(){
   aboutGallery();
   certificateGallery();
   faq();
+  menuMobile();
 
   // Chrome Smooth Scroll
   try {
@@ -254,7 +254,8 @@ function mainSlider(){
     autoplay: {
       delay: 4000,
     },
-    loop: true
+    loop: true,
+    disableOnInteraction: false
   });
 }
 
@@ -338,5 +339,29 @@ function faq(){
     _this.parents(faqBlock).addClass('is-active');
     _this.next(faqBlockAnswer).stop().slideDown();
 
+  });
+}
+
+function menuMobile(){
+  var block = $('.header__nav-mobile');
+  var btn = block.find('.header__nav-btn');
+  var popup = block.find('.header__nav-popup');
+
+  btn.on('click', function(e){
+    e.stopPropagation();
+
+    if (block.hasClass('is-active')) {
+      block.removeClass('is-active')
+    } else {
+      block.addClass('is-active')
+    }
+  });
+
+  popup.on('click', function(e){
+    e.stopPropagation();
+  });
+
+  $(document).on('click', function(){
+    block.removeClass('is-active')
   });
 }

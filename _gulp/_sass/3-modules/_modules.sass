@@ -218,6 +218,33 @@
           outline: none
         &:hover
           background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJCAYAAAA2NNx1AAAAYElEQVQokbXOsRFAQBAF0HfmClGEBhQh14BSZNQioxaxVAECzFxu/Zmd3ejtT5ZTkRorRsw+pPoDLeFQ9IXDUUiWc8OBLgrlbtyjwYAUNRk7WmzPsymicX52OJ6LOxS/AB5GFd+d/U0+AAAAAElFTkSuQmCC') 0 0 no-repeat
+    .gallery-item
+      position: relative
+      display: inline-block
+      transition: all 0.35s
+      &:hover
+        &>span
+          visibility: visible
+          opacity: 1
+      &>span
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        background: rgba($color-blue,.6)
+        border: 10px solid rgba($color-white,.7)
+        opacity: 0
+        visibility: hidden
+        transition: all 0.35s
+        svg
+          width: 50px
+          height: 50px
+          .path-color
+            fill: $color-white
 
 .clients
   &__carousel
@@ -582,6 +609,33 @@
     z-index: 5
     padding: 0
     pointer-events: none
+  .gallery-item
+    position: relative
+    display: inline-block
+    transition: all 0.35s
+    &:hover
+      &>span
+        visibility: visible
+        opacity: 1
+    &>span
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      background: rgba($color-blue,.6)
+      border: 10px solid rgba($color-white,.7)
+      opacity: 0
+      visibility: hidden
+      transition: all 0.35s
+      svg
+        width: 50px
+        height: 50px
+        .path-color
+          fill: $color-white
 
 .certificate
   &__gallery
