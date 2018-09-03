@@ -817,6 +817,9 @@
     li
       list-style: none
       display: inline-block
+      padding: 0
+      &::before
+        display: none
       &+li
         margin-left: -4px
   &__active
@@ -826,7 +829,7 @@
     font-family: $font-basker-sbi
     color: #232323
   &__right
-    padding-left: 16px
+    padding-left: 16px !important
     i
       background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAJCAYAAACvzAXAAAAAfElEQVQ4jc3TsQ3CQBBE0X8WLRC7FruZCSCCPogc7NTgItwKVAKR0Qkbp7cTrSZ60mpKRNAykr637StwAwZJr7XvGrj+RtIEPIDFdr/2qZCwD02HhC20RMS7NeogM3A+AaWloh5OHdsX4A6MKd9dAyU90yF/gZBsOHtAgA9MwC24ENHQ1gAAAABJRU5ErkJggg==') 0 0 no-repeat
       width: 41px
@@ -838,7 +841,7 @@
       &:hover
         background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAJCAYAAACvzAXAAAAAZ0lEQVQ4jc3OsRGCQBRF0bPONobtaKStUAC5BRjSCvZgrokwissQ/n+TN/OiU9yfEnXGBR0e81nDOO36z46+oNmQNKAZkaygFa9AzF43DBUlWrLRCVccD9GSjRYgpozIHyBkQ/4B4Q05KROwb7dclQAAAABJRU5ErkJggg==') 0 0 no-repeat
   &__left
-    padding-right: 17px
+    padding-right: 17px !important
     i
       background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJCAYAAAA2NNx1AAAAaElEQVQokbXRuw2DQBBF0QPaQtwKRZCTbeRSnBlpqjG1ENMECUgExuKzvtHTBCeZKiJseuCDF3oHyjl/vdd30F+tcFF0hYujUEXEgAltKRQSOgx44n0W2HtewohmwV3B92D/wNNmF8Vn8CsZkdqQV+MAAAAASUVORK5CYII=') 0 0 no-repeat
       width: 22px

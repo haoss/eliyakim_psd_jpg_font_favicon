@@ -69,6 +69,10 @@ $(document).on('ready', function(){
   faq();
   menuMobile();
 
+  $('.content ol li').each(function(){
+    $(this).prepend('<span class="span">' + ($(this).index() + 1) + '</span>');
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
